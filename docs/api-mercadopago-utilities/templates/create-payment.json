@@ -1,0 +1,71 @@
+{
+  "requestData": {
+    "returnUrl": "https://google.com",
+    "cancelCheckoutURL": "https://hotmail.com",
+    "additionalInfo": {
+      "encryptedCreditCards": [{
+        "encryptedContent": "{CARD_TOKEN}",
+        "encryptionType": "mercadopagoToken"
+      }],
+      "metadata": {
+        "mercadopagoPaymentMethodId": "visa"
+      },
+      "installments": 1
+    }
+   },
+  "payment": {
+    "clientOrderReference": "123123123",
+    "clientPaymentReference": "{PAYMENT_REFERENCE}",
+    "paymentMethod" : "MERCADOPAGO_CC",
+    "currency": "BRL",
+
+    "shoppingCart": {
+      "items": [
+        {
+           "name": "Nome do Produto de Teste",
+           "reference": "Referencia 121232",
+           "discountAmountInCents": 10000,
+           "totalCostInCents": 90000,
+           "unitCostInCents": 100000,
+           "quantity": 1
+         }
+      ],
+      "totalCostInCents": 90000
+    },
+
+    "buyer": {
+      "reference": "A2B3C4",
+      "type": "company",
+      "name": "Alexandre B.",
+      "gender": "M",
+      "birthDate": "2005-01-31",
+      "documentNumber": "16862369210",
+      "documentType": "CPF",
+      "email": "test_user_29505388@testuser.com",
+      "phone": "2199999999",
+      "ipAddress": "192.168.0.100",
+      "billingAddress": {
+        "city": "Rio de Janeiro",
+        "district": "Centro",
+        "country": "Brazil",
+        "complement": "Teste de complemento",
+        "number": "12123",
+        "zipCode": "12123321",
+        "stateCode": "RJ",
+        "state": "Rio de Janeiro",
+        "street": "Rua de Teste"
+      },
+      "shippingAddress": {
+        "city": "Rio de Janeiro",
+        "district": "Centro",
+        "country": "Brazil",
+        "complement": "Teste de complemento",
+        "number": "12123",
+        "zipCode": "12123321",
+        "stateCode": "RJ",
+        "state": "Rio de Janeiro",
+        "street": "Rua de Teste"
+      }
+     }
+  }
+}

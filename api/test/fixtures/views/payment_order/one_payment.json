@@ -1,0 +1,85 @@
+{
+  "buyer": {
+    "billingAddress": {
+      "city": "City",
+      "complement": "Complement",
+      "country": "Brazil",
+      "district": "District",
+      "number": "1234C",
+      "state": "State",
+      "stateCode": "SC",
+      "street": "Calle Loca",
+      "zipCode": "23970000"
+    },
+    "birthDate": "1980-12-10",
+    "documentNumber": "000111222333",
+    "documentType": "CPF",
+    "email": "test@test.com",
+    "gender": "M",
+    "ipAddress": "100.200.100.200",
+    "name": "Fulanito Menganito Detal",
+    "phone": "1234567890",
+    "reference": "12345",
+    "shippingAddress": {
+      "city": "SCity",
+      "complement": "SComplement",
+      "country": "Brazil",
+      "district": "SDistrict",
+      "number": "S1234C",
+      "state": "SState",
+      "stateCode": "SSC",
+      "street": "SCalle Loca",
+      "zipCode": "S2397000"
+    },
+    "type": "person"
+  },
+  "createdAt": "2017-03-16T18:47:03Z",
+  "currency": "BRL",
+  "id": "1",
+  "totalInCents": 2440,
+  "interestInCents": 20,
+  "paymentMethod": "ONE_CREDIT_CARD",
+  "expirationDate": "2020-01-01T00:00:00Z",
+  "retriedPayments": [],
+  "payments": [{
+    "clientReference": "0123-payment-ref",
+    "createdAt": "2017-03-16T18:47:03Z",
+    "gatewayMethod": "MERCADOPAGO_CC",
+    "gatewayReference": "mpMockId",
+    "id": "11",
+    "type": "creditCard",
+    "installments": 6,
+    "amountInCents": 2420,
+    "interestInCents": 20,
+    "paymentInformation": {
+      "firstSixDigits": "123456",
+      "lastFourDigits": "1234",
+      "processor": "visa"
+    },
+    "status": "successful",
+    "statusDetail": "ok",
+    "retriedWithPaymentId": null,
+    "updatedAt": "2017-03-16T18:47:03Z"
+  }],
+  "purchaseReference": "PURCHASE_REFERENCE",
+  "reference": "REFERENCE",
+  "shoppingCart": {
+    "items": [{
+      "discountAmountInCents": 1000,
+      "name": "Samsung Galaxy Mega Duos Preto (Bom)",
+      "quantity": 1,
+      "reference": "4499",
+      "totalCostInCents": 2420,
+      "unitCostInCents": 3420,
+      "details": ""
+    }],
+    "totalCostInCents": 2420
+  },
+  "status": "successful",
+  "updatedAt": "2017-03-16T18:47:03Z",
+  "metadata": {
+    "successUrl": "www.success.com",
+    "cancelUrl": "www.cancel.com",
+    "pendingUrl": "www.pending.com"
+  }
+}

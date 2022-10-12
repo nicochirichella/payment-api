@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "PaymentMethod",
+  "type": "object",
+  "allOf": [
+    { "$ref": "#/definitions/readable" },
+    { "$ref": "#/definitions/writable" },
+    { "$ref": "#/definitions/relations" }
+  ],
+  "definitions": {
+
+    "readable": {
+      "properties": {
+        "id": {
+          "id": "id",
+          "type": "string"
+        },
+        "createdAt": {
+          "id": "createdAt",
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "id": "updatedAt",
+          "type": "string",
+          "format": "date-time"
+        },
+        "uiUrl": {
+          "id": "updatedAt",
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["id", "createdAt", "updatedAt"]
+    },
+
+    "writable": {
+      "properties": {
+        "gatewayMethod": {
+          "id": "gatewayMethod",
+          "type": "string"
+        },
+        "enabled": {
+          "id": "reference",
+          "type": "boolean"
+        }
+      }
+    },
+
+    "relations": {
+      "properties": {
+        "validGatewayMethods": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "id": "gatewayMethod",
+            "type": "string"
+          }
+        },
+        "required": ["validGatewayMethods"]
+      }
+    }
+
+  }
+}

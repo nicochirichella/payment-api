@@ -1,0 +1,9 @@
+{
+    "data": {
+        "name": "INSTRUMENT_DECLINED",
+        "message": "The specified instrument was either declined by the processor or bank or it cannot be used for this payment.",
+        "information_link": "https://developer.paypal.com/docs/api/payments/#errors",
+        "details": "If the buyer's funding source has insufficient funds, restart the payment and prompt the buyer to choose another payment method that is available on your site."
+    },
+    "statusCode": 400
+}

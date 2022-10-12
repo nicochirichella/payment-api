@@ -1,0 +1,13 @@
+{
+  "data": {
+    "id": "2526369603"
+  },
+  "date_created": "2017-01-06T15:12:05.000-04:00",
+  "type": "payment",
+  "api_version": "v1",
+  "id": 144377708,
+  "action": "payment.created",
+  "user_id": 185370551,
+  "live_mode": true,
+  "data_id": "2526369603"
+}

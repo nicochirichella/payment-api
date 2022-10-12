@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Trocafone Checkout</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
+    <!-- BEGIN TRACKJS -->
+    <script type="text/javascript">window._trackJs = {token: 'fe03fb4b4f2544f889e2e0206b0c6999'};</script>
+    <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+    <!-- END TRACKJS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/jquery-i18n/jquery.i18n.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/product-detail.css">
+
+    <script src="https://www.paypalobjects.com/webstatic/ppplusdcc/ppplusdcc.min.js" type="text/javascript"></script>
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+</head>
+<body>
+
+<div class="overlay">
+    <div class="loader-container">
+        <div class="loader"></div>
+        <span class="loader-legend translate">processing_payment</span>
+    </div>
+</div>
+<header class="header-checkout">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-5 col-sm-5 col-md-4 rapid-ssl">
+                <i class="ico-rapid-ssl-small"></i>
+                <p><span class="translate">site_seguro</span><br><span class="translate">site_homologado</span></p>
+            </div>
+            <div class="col-xs-7 col-sm-7 col-md-4 logo-container">
+                <div class="logo">
+                    <img src="https://www.trocafone.com/assets/img/global/common/logo.png" class="img-responsive"
+                         alt="Trocafone" title="Trocafone">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="iframe-container" class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-6 col-lg-offset-1 col-lg-6">
+            <div id="ppplusDiv"></div>
+        </div>
+
+        <div class="col-md-4 col-lg-4 checkout-summary-box-container">
+            <div class="checkout-summary-box">
+                <div class="js-checkout-detail"><span class="translate">product_summary_title</span>
+                </div>
+                <div class="checkout-product-detail-data">
+                    <div class="product-txt translate">product_summary_subtitle</div>
+                    <div class="product-img-container">
+                        <img class="product-img" src=""/>
+                    </div>
+                    <div class="product-text">
+                        <h1 class="product-title"></h1>
+                    </div>
+                </div>
+                <div class="checkout-product-detail-prices">
+                    <ul class="list-unstyled">
+                        <li class="row price-row total">
+                            <span class="col-xs-7 text-left price-label translate">product_summary_final_price</span>
+                            <span class="col-xs-5 text-right price-text">
+                                <span class="js-price-text translate">product_summary_currency_sign</span>
+                                <span class="js-current-price-label"></span>
+                            </span>
+                            <span class="col-xs-12 price-text">
+                                (<span class="js-price-installments"></span>x
+                                <span class="js-price-text translate">product_summary_currency_sign</span>
+                                <span class="js-current-each-installment-price-label"></span>)
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="action-container" class="col-12 text-center">
+                    <button class="troca-primary translate"
+                            type="submit"
+                            id="continueButton"
+                            onclick="ppp.doContinue(); return false;">end_purchase</button>
+                </div>
+            </div>
+            <a id="link-return-to-checkout" class="troca-backlink" href="#">
+                <span class="translate">back_to_checkout</span>
+            </a>
+        </div>
+        <div class="col-sm-12 col-lg-12">
+            <div class="footer-copy translate">copyright</div>
+        </div>
+    </div>
+</div>
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/envs.js"></script>
+<script src="scripts/query-params-parser.js"></script>
+<script src="scripts/kissmetrics.js"></script>
+<script src="scripts/translations/translations.js"></script>
+<script src="scripts/app.js"></script>
+<!-- endbuild -->
+</body>
+</html>

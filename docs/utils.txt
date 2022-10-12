@@ -1,0 +1,22 @@
+-------------------------------
+   Para crear un nuevo pago
+-------------------------------
+
+curl --insecure \
+-H "Content-Type: application/json" \
+-H 'X-Api-Key: 123' \
+-X POST \
+-d @api-documentation/examples/paymentRequest.json \
+"https://localhost:8443/test1/v1/payments" | jq '.'
+
+
+
+-------------------------------
+   Para realizar un IPN
+-------------------------------
+curl --insecure \
+-H "Content-Type: application/xml" \
+-X POST \
+-d @mundi_ipn_post.xml \
+"https://localhost:8443/test1/v1/gateways/MUNDIPAGG/ipn" | jq '.'
+

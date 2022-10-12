@@ -1,0 +1,12 @@
+<shipTo>
+    <street1>Calle Loca 1234C</street1>
+    <street2>Complement</street2>
+    <city>City</city>
+    <county>District</county>
+    <state>SC</state>
+    <postalCode>23970000</postalCode>
+    <country>BR</country>
+    <company>Ingbee Corporation</company>
+    <phoneNumber>1234567890</phoneNumber>
+    <email>test@test.com</email>
+</shipTo>

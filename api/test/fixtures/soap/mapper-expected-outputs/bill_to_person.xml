@@ -1,0 +1,16 @@
+<billTo>
+  <firstName>Fulanito Manguito</firstName>
+  <lastName>Detal</lastName>
+  <street1>Calle Loca 1234C</street1>
+  <street2>Complement</street2>
+  <city>City</city>
+  <county>District</county>
+  <state>SC</state>
+  <postalCode>23970000</postalCode>
+  <country>BR</country>
+  <phoneNumber>1234567890</phoneNumber>
+  <email>test@test.com</email>
+  <ipAddress>100.200.100.200</ipAddress>
+  <dateOfBirth>1980-12-10</dateOfBirth>
+  <personalID>000111222333</personalID>
+</billTo>

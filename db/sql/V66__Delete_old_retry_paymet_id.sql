@@ -1,0 +1,1 @@
+ALTER TABLE public.payments DROP COLUMN "retry_payment_id";

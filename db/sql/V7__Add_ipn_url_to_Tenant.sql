@@ -1,0 +1,1 @@
+ALTER TABLE "public"."tenants" ADD COLUMN "ipn_url" varchar(255) NOT NULL;

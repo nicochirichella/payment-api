@@ -1,0 +1,115 @@
+{
+  "id": 2521209286,
+  "date_created": "2017-01-03T15:43:51.000-04:00",
+  "date_approved": "2017-01-03T15:43:53.000-04:00",
+  "date_last_updated": "2017-01-03T15:43:53.000-04:00",
+  "money_release_date": "2017-01-17T15:43:53.000-04:00",
+  "operation_type": "regular_payment",
+  "issuer_id": "25",
+  "payment_method_id": "visa",
+  "payment_type_id": "credit_card",
+  "status": "approved",
+  "status_detail": "accredited",
+  "currency_id": "BRL",
+  "description": "Samsung Galaxy Note 4 Branco (Excelente)",
+  "live_mode": true,
+  "sponsor_id": null,
+  "authorization_code": "1234567",
+  "collector_id": 185370551,
+  "payer": {
+    "type": "guest",
+    "id": null,
+    "email": "test_user_29505388@testuser.com",
+    "identification": {
+      "type": "CPF",
+      "number": "111111111111"
+    },
+    "phone": {
+      "area_code": "01",
+      "number": "1111-1111",
+      "extension": null
+    },
+    "first_name": "Test",
+    "last_name": "Test",
+    "entity_type": null
+  },
+  "metadata": {},
+  "additional_info": {
+    "items": [
+      {
+        "id": null,
+        "title": "Samsung Galaxy Note 4 Branco (Excelente)",
+        "description": "Samsung Galaxy Note 4 Branco (Excelente)",
+        "picture_url": "https://staging-cdna.trocafone.com/images/phones/ls-note4-branco-1.png",
+        "category_id": "phones",
+        "quantity": "1",
+        "unit_price": "1908.9"
+      }
+    ],
+    "payer": {
+      "phone": {
+        "number": "(14)7573-28306"
+      },
+      "address": {
+        "zip_code": "05415030",
+        "street_name": "Doutor Virg&iacute;lio de Carvalho Pinto",
+        "street_number": "602"
+      },
+      "first_name": "Colette",
+      "last_name": "Sears"
+    },
+    "shipments": {
+      "receiver_address": {
+        "zip_code": "05415030",
+        "street_name": "Doutor Virg&iacute;lio de Carvalho Pinto",
+        "street_number": "602"
+      }
+    }
+  },
+  "order": {},
+  "external_reference": "75796facb852b2db664eb9ca81b21edb",
+  "transaction_amount": 1908.9,
+  "transaction_amount_refunded": 0,
+  "coupon_amount": 0,
+  "differential_pricing_id": null,
+  "deduction_schema": null,
+  "transaction_details": {
+    "net_received_amount": 1813.65,
+    "total_paid_amount": 1908.9,
+    "overpaid_amount": 0,
+    "external_resource_url": null,
+    "installment_amount": 1908.9,
+    "financial_institution": null,
+    "payment_method_reference_id": "1234567"
+  },
+  "fee_details": [
+    {
+      "type": "mercadopago_fee",
+      "amount": 95.25,
+      "fee_payer": "collector"
+    }
+  ],
+  "captured": true,
+  "binary_mode": false,
+  "call_for_authorize_id": null,
+  "statement_descriptor": "MERCADOP-TROCAFONE",
+  "installments": 1,
+  "card": {
+    "id": null,
+    "first_six_digits": "423564",
+    "last_four_digits": "5682",
+    "expiration_month": 4,
+    "expiration_year": 2020,
+    "date_created": "2017-01-03T15:43:51.000-04:00",
+    "date_last_updated": "2017-01-03T15:43:51.000-04:00",
+    "cardholder": {
+      "name": "APRO Colette Sears",
+      "identification": {
+        "number": "46276537519",
+        "type": "CPF"
+      }
+    }
+  },
+  "notification_url": "https://staging.trocafone.com/comprar/checkout/webhook",
+  "refunds": []
+}

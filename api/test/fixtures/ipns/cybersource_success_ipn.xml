@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CaseManagementOrderStatus SYSTEM "https://ebctest.cybersource.com/ebctest/reports/dtd/cmorderstatus_1_1.dtd">
+
+<CaseManagementOrderStatus xmlns="http://reports.cybersource.com/reports/cmos/1.0" MerchantID="trocafone_br" Name="Case Management Order Status" Date="2018-12-27 13:33:26 GMT" Version="1.1">
+  <Update MerchantReferenceNumber="CLIENT_REFERENCE" RequestID="5459175868796365904011">
+    <OriginalDecision>REVIEW</OriginalDecision>
+    <NewDecision>ACCEPT</NewDecision>
+    <Reviewer>janselmi</Reviewer>
+    <ReviewerComments>Billing and shipping addresses are the same.</ReviewerComments>
+    <Notes>
+      <Note Date="2018-12-27 13:33:26" AddedBy="janselmi" Comment="Took ownership." />
+    </Notes>
+    <Queue>Group: Example</Queue>
+    <Profile>Example</Profile>
+  </Update>
+</CaseManagementOrderStatus>

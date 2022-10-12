@@ -1,0 +1,120 @@
+{
+    "data": {
+        "id": "PAY-8KR674868H750523LLJL2RUQ",
+        "intent": "sale",
+        "state": "approved",
+        "cart": "2VM089441K607432U",
+        "payer": {
+            "payment_method": "paypal",
+            "status": "VERIFIED",
+            "payer_info": {
+                "birth_date": "1990-01-01",
+                "email": "test_user_29505388@testuser.com",
+                "first_name": "Megan Powell",
+                "last_name": "",
+                "tax_id": "57842217000166",
+                "tax_id_type": "BR_CNPJ",
+                "shipping_address": {
+                    "recipient_name": "Brian Robinson",
+                    "line1": "4th Floor",
+                    "line2": "Unit #34",
+                    "city": "San Jose",
+                    "state": "CA",
+                    "postal_code": "95131",
+                    "country_code": "US"
+                },
+                "country_code": "BR"
+            }
+        },
+        "transactions": [
+            {
+                "amount": {
+                    "currency": "BRL",
+                    "details": {
+                        "subtotal": "636.00"
+                    },
+                    "total": "636.00"
+                },
+                "custom": "6047517bbddf82d3f5fa481913eace10_1",
+                "invoice_number": "6047517bbddf82d3f5fa481913eace10_1",
+                "item_list": {
+                    "items": [
+                        {
+                            "currency": "BRL",
+                            "description": "Samsung Galaxy S4 Zoom Preto (Bom)",
+                            "name": "Samsung Galaxy S4 Zoom Preto (Bom)",
+                            "price": "636.00",
+                            "quantity": 1
+                        }
+                    ],
+                    "shipping_address": {
+                        "city": "Sao Paulo",
+                        "country_code": "BR",
+                        "line1": "Rua Estela Sezefreda 123",
+                        "line2": "Pinheiros ",
+                        "phone": "23438725185",
+                        "postal_code": "05415070",
+                        "state": "São Paulo"
+                    }
+                },
+                "payment_options": {
+                    "allowed_payment_method": "INSTANT_FUNDING_SOURCE",
+                    "recurring_flag": false,
+                    "skip_fmf": false
+                },
+                "reference_id": "6047517bbddf82d3f5fa481913eace10_1",
+                "related_resources": [           {
+                    "sale": {
+                        "id": "8MH73947JT871392J",
+                        "state": "completed",
+                        "amount": {
+                            "total": "636.00",
+                            "currency": "BRL",
+                            "details": {
+                                "subtotal": "636.00"
+                            }
+                        },
+                        "payment_mode": "INSTANT_TRANSFER",
+                        "protection_eligibility": "ELIGIBLE",
+                        "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
+                        "transaction_fee": {
+                            "value": "25.20",
+                            "currency": "BRL"
+                        },
+                        "receipt_id": "4639628668596728",
+                        "parent_payment": "PAY-0G373723FR018031HLJOLQGI",
+                        "create_time": "2018-01-15T14:18:55Z",
+                        "update_time": "2018-01-15T14:18:55Z",
+                        "links": [
+                            {
+                                "href": "https://api.sandbox.paypal.com/v1/payments/sale/8MH73947JT871392J",
+                                "rel": "self",
+                                "method": "GET"
+                            },
+                            {
+                                "href": "https://api.sandbox.paypal.com/v1/payments/sale/8MH73947JT871392J/refund",
+                                "rel": "refund",
+                                "method": "POST"
+                            },
+                            {
+                                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAY-0G373723FR018031HLJOLQGI",
+                                "rel": "parent_payment",
+                                "method": "GET"
+                            }
+                        ],
+                        "soft_descriptor": "PAYPAL *TROCAFONEBR"
+                    }
+                }]
+            }
+        ],
+        "create_time": "2018-01-14T15:44:23Z",
+        "links": [
+            {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAY-8KR674868H750523LLJL2RUQ",
+                "rel": "self",
+                "method": "GET"
+            }
+        ]
+    },
+    "statusCode": 200
+}

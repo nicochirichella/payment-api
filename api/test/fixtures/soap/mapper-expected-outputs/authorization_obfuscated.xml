@@ -1,0 +1,52 @@
+<merchantID>trocafone_br</merchantID>
+<merchantReferenceCode>0123-payment-ref</merchantReferenceCode>
+<clientLibrary>node</clientLibrary>
+<clientLibraryVersion>version</clientLibraryVersion>
+<clientEnvironment>osInfo</clientEnvironment>
+<billTo>
+<firstName>Fulanito Manguito</firstName>
+<lastName>Detal</lastName>
+<street1>Calle Loca 1234C</street1>
+<street2>Complement</street2>
+<city>City</city>
+<county>District</county>
+<state>SC</state>
+<postalCode>23970000</postalCode>
+<country>BR</country>
+<phoneNumber>1234567890</phoneNumber>
+<email>test@test.com</email>
+<ipAddress>100.200.100.200</ipAddress>
+<dateOfBirth>1980-12-10</dateOfBirth>
+<personalID>000111222333</personalID>
+</billTo>
+<shipTo>
+<firstName>Fulanito Manguito</firstName>
+<lastName>Detal</lastName>
+<street1>SCalle Loca S1234C</street1>
+<street2>SComplement</street2>
+<city>SCity</city>
+<county>SDistrict</county>
+<state>SSC</state>
+<postalCode>S2397000</postalCode>
+<country>BR</country>
+<phoneNumber>1234567890</phoneNumber>
+<email>test@test.com</email>
+</shipTo>
+<item id="0">
+<unitPrice>34.2</unitPrice>
+<quantity>1</quantity>
+</item>
+<purchaseTotals>
+<currency>CUR</currency>
+<grandTotalAmount>42.23</grandTotalAmount>
+</purchaseTotals>
+<installment>
+<totalCount>8</totalCount>
+</installment>
+<card>
+<cvNumber>***</cvNumber>
+</card>
+<recurringSubscriptionInfo>
+<subscriptionID>CYBERSOURCE_PAYMENT_TOKEN</subscriptionID>
+</recurringSubscriptionInfo>
+<ccAuthService run="true"></ccAuthService>

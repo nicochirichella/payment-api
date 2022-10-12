@@ -1,0 +1,60 @@
+{
+    "additional_data": [
+        {
+            "key": "sender_account_id",
+            "value": "PURCHASE_REFERENCE"
+        },
+        {
+            "key": "sender_first_name",
+            "value": "Fulanito Manguito"
+        },
+        {
+            "key": "sender_last_name",
+            "value": "Detal"
+        },
+        {
+            "key": "sender_email",
+            "value": "test@test.com"
+        },
+        {
+            "key": "sender_phone",
+            "value": "1234567890"
+        },
+        {
+            "key": "sender_country_code",
+            "value": "BR"
+        },
+        {
+            "key": "sender_address_state",
+            "value": "SC"
+        },
+        {
+            "key": "sender_address_city",
+            "value": "City"
+        },
+        {
+            "key": "sender_address_zip",
+            "value": "23970000"
+        },
+        {
+            "key": "sender_address_line1",
+            "value": "Calle Loca 1234C"
+        },
+        {
+            "key": "sender_address_line2",
+            "value": "District Complement"
+        },
+        {
+            "key": "sender_create_date",
+            "value": "01/01/2000"
+        },
+        {
+            "key": "sender_signup_ip",
+            "value": "100.200.100.200"
+        },
+        {
+            "key": "cd_string_one",
+            "value": "Samsung Galaxy Mega Duos Preto (Bom)"
+        }
+    ]
+}

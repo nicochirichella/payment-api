@@ -1,0 +1,111 @@
+{
+    "data": {
+        "id": 2949396479,
+        "date_created": "2017-08-28T11:24:42.000-04:00",
+        "date_approved": null,
+        "date_last_updated": "2017-08-28T11:24:42.000-04:00",
+        "date_of_expiration": null,
+        "money_release_date": null,
+        "operation_type": "regular_payment",
+        "issuer_id": null,
+        "payment_method_id": "bolbradesco",
+        "payment_type_id": "ticket",
+        "status": "pending",
+        "status_detail": "pending_waiting_payment",
+        "currency_id": "BRL",
+        "description": "Nome do Produto de Teste",
+        "live_mode": true,
+        "sponsor_id": null,
+        "authorization_code": null,
+        "money_release_schema": null,
+        "related_exchange_rate": null,
+        "collector_id": 185370551,
+        "payer": {
+            "type": "guest",
+            "id": null,
+            "email": "test_user_29505388@testuser.com",
+            "identification": {
+                "type": "CPF",
+                "number": "111111111111"
+            },
+            "phone": {
+                "area_code": "01",
+                "number": "1111-1111",
+                "extension": ""
+            },
+            "first_name": "Test",
+            "last_name": "Test",
+            "entity_type": null
+        },
+        "metadata": {},
+        "additional_info": {
+            "items": [
+                {
+                    "id": "Referencia 121232",
+                    "title": "Nome do Produto de Teste",
+                    "description": "Nome do Produto de Teste",
+                    "picture_url": null,
+                    "category_id": "phones",
+                    "quantity": "1",
+                    "unit_price": "900"
+                }
+            ],
+            "payer": {
+                "phone": {
+                    "number": "2199999999"
+                },
+                "address": {
+                    "zip_code": "12123321",
+                    "street_name": "Rua de Teste",
+                    "street_number": "12123"
+                }
+            },
+            "shipments": {
+                "receiver_address": {
+                    "zip_code": "12123321",
+                    "street_name": "Rua de Teste",
+                    "street_number": "12123",
+                    "apartment": "Teste de complemento"
+                }
+            }
+        },
+        "order": {},
+        "external_reference": "CPR1486647938",
+        "transaction_amount": 900,
+        "transaction_amount_refunded": 0,
+        "coupon_amount": 0,
+        "differential_pricing_id": null,
+        "deduction_schema": null,
+        "barcode": {
+            "type": null,
+            "width": null,
+            "height": null,
+            "content": "23798726800000900003380260250805439200633330"
+        },
+        "transaction_details": {
+            "net_received_amount": 0,
+            "total_paid_amount": 900,
+            "overpaid_amount": 0,
+            "external_resource_url": "https://www.mercadopago.com/mlb/payments/ticket/helper?payment_id=2949396479&payment_method_reference_id=2508054392&caller_id=238320518",
+            "installment_amount": 0,
+            "financial_institution": null,
+            "payment_method_reference_id": "2508054392",
+            "payable_deferral_period": null,
+            "acquirer_reference": null,
+            "verification_code": "2508054392"
+        },
+        "fee_details": [],
+        "captured": true,
+        "binary_mode": false,
+        "call_for_authorize_id": null,
+        "statement_descriptor": null,
+        "installments": 1,
+        "card": {},
+        "notification_url": "http://payment-staging.trocafone.com/ec_br/v1/gateways/MERCADOPAGO/ipn",
+        "refunds": [],
+        "processing_mode": "aggregator",
+        "merchant_account_id": null,
+        "acquirer": null,
+        "merchant_number": null
+    }
+}

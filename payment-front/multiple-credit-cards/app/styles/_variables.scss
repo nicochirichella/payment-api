@@ -1,0 +1,90 @@
+//COLORS
+$primary-lighter: #FFCF77;
+$primary-light: #F9BA48;
+$primary-middle:#FFA53D;
+$primary-dark: #FF8800;
+$primary-darker: #F06F31;
+
+$secondary-lighter: #A9CEFF;
+$secondary-light:#7CA7F2; 
+$secondary-middle: #6C8EDB;
+$secondary-dark:#4D649B;
+$secondary-darker:#1D2656;
+
+$gray-1:#FAFAFA;
+$gray-2:#F0F0F0;
+$gray-3:#D7D7D7;
+$gray-4:#C0C0C0;
+$gray-5:#A7A7A7;
+$gray-6:#696969;
+$gray-7:#404040;
+$gray-8:#202020;
+$white: #fff;
+
+$success-lighter:#E3F1DF ;
+$success-light: #BBE5B3;
+$success-middle: #61B251;
+$success-dark: #399D25;
+$success-darker: #035227;
+
+$danger-lighter:#FBEAE5;
+$danger-light: #FEAD9A;
+$danger-middle: #DE3618;
+$danger-dark: #BF0711;
+$danger-darker: #9F0000;
+
+$warning-lighter: #FCF1CD;
+$warning-light: #FFEA8A;
+$warning-middle: #F8CD0E;
+$warning-dark: #DDBA1F;
+$warning-darker: #C8A300;
+
+$complementary-gray-lighter: #F9FAFB;
+$complementary-gray-light: #F3F6F8;
+$complementary-gray-middle: #DFE3E8;
+$complementary-gray-dark: #C3CCD5;
+$complementary-gray-darker: #B1BBC5; 
+
+
+$complementary-second-lighter: #73A9FF;
+$complementary-second-light: #538DEC;
+$complementary-second-middle:#0C61E8;
+$complementary-second-dark: #043E9C;
+$complementary-second-darker: #03255C;
+
+//PAGE CONTAINER
+$body-bg: $white;
+$page-container-bg: $gray-2;
+
+//STRIPPED BACKGROUND
+$stripped-bg-dark: $gray-1;
+$stripped-bg-light: #fff;
+
+//GRAY BOX WITH GRAY BORDER
+$content-box-bg: $white;
+$content-box-bdr: $gray-3;
+
+
+//LINKS
+$link-color: $complementary-second-middle;
+$link-color-hover: $complementary-second-dark;
+$link-color-active:  $complementary-second-dark;
+
+
+$rounded-corners-small: 2px;
+$rounded-corners-medium: 4px;
+$rounded-corners-large: 5px;
+
+
+
+//FORMS
+$form-inputs-bdr: $gray-4;
+$form-inputs-bg: #fff;
+$form-text-color: $gray-5;
+$form-text-placeholder-color: $form-text-color;
+
+
+$radio-circle-bdr:$gray-7;
+$radio-circle-bg: #fff;
+$radio-circle-selected: $primary-dark;
+$radio-button-width-height: 20px;

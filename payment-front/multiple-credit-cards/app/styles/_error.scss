@@ -1,0 +1,77 @@
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .form-control-feedback, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
+    color: $danger-dark !important;
+}
+.has-error .form-control {
+    border-color: $danger-dark !important;
+}
+.has-error .control-label {
+    color: $gray-7 !important;
+}
+
+.form-group {
+    .help-block {
+        display: none;
+        opacity: 0;
+        margin-left: calc(33% + 35px);
+        margin-top: 5px;
+        margin-bottom: 0;
+        color: $danger-dark;
+        font-size: 11px;
+    }
+    &.credit-card-date{
+        .help-block{
+            margin-left: 0;
+        }
+    }
+    &.has-error .help-block, .has-error .help-block {
+        display: block;
+        opacity: 1;
+    }
+
+    &.has-error .help-quote, .has-error .help-quote {
+        margin-top: 0 !important;
+    }
+}
+.is-mobile {
+    .credit-card-form .form-group{
+        .help-block{
+            margin-left: 15px;
+        }
+        .help-quote{
+            margin-left: 15px;
+        }
+        .form-group-checkout-right .help-block{
+            margin-left: 0;
+        }
+        .credit-img-block{
+            margin-left: 15px;
+        }
+    }
+}
+
+.checkout-product-detail-error {
+    background-color: #faf4c8;
+    text-align: left;
+    width: 100%;
+    color: #404040;
+    position: relative;
+    vertical-align: middle;
+    padding: 15px;
+    font-size: 11px;
+    top:10px;
+    &:before{
+        content: '';
+        display: block;
+        top:-10px;
+        position:absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent #faf4c8 transparent;
+    }
+}
+
+#error-api {
+    display: none;
+}

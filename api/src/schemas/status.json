@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Status for payment orders and payments",
+  "id": "status",
+  "type": "string",
+  "enum": [
+    "successful",
+    "rejected",
+    "chargedBack",
+    "pendingCapture",
+    "refunded",
+    "cancelled",
+    "partialRefund",
+    "inMediation",
+    "pendingCancel",
+    "pendingAuthorize",
+    "authorized",
+    "creating",
+    "error"
+  ]
+}

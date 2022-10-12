@@ -1,0 +1,1 @@
+ALTER TABLE public.payment_methods ALTER COLUMN ui_url DROP NOT NULL;

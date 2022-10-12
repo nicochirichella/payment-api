@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Create Token Cybersource",
+  "type": "object",
+  "properties": {
+    "fields": {
+      "type": "object",
+      "properties": {
+        "access_key": {
+          "id": "access_key",
+          "type": "string"
+        },
+        "profile_id": {
+          "id": "profile_id",
+          "type": "string"
+        },
+        "transaction_uuid": {
+          "id": "transaction_uuid",
+          "type": "string"
+        },
+        "locale": {
+          "id": "locale",
+          "type": "string"
+        },
+        "transaction_type": {
+          "id": "transaction_type",
+          "type": "string",
+          "enum": ["create_payment_token"]
+        },
+        "reference_number": {
+          "id": "reference_number",
+          "type": "string"
+        },
+        "amount": {
+          "id": "amount",
+          "type": "string"
+        },
+        "currency": {
+          "id": "currency",
+          "type": "string",
+          "enum": ["BRL"]
+        },
+        "payment_method": {
+          "id": "payment_method",
+          "type": "string",
+          "enum": ["card"]
+        },
+        "bill_to_forename": {
+          "id": "bill_to_forename",
+          "type": "string"
+        },
+        "bill_to_surname": {
+          "id": "bill_to_surname",
+          "type": "string"
+        },
+        "bill_to_email": {
+          "id": "bill_to_email",
+          "type": "string"
+        },
+        "bill_to_phone": {
+          "id": "bill_to_phone",
+          "type": "string"
+        },
+        "bill_to_address_line1": {
+          "id": "bill_to_address_line1",
+          "type": "string"
+        },
+        "bill_to_address_city": {
+          "id": "bill_to_address_city",
+          "type": "string"
+        },
+        "bill_to_address_state": {
+          "id": "bill_to_address_state",
+          "type": "string"
+        },
+        "bill_to_address_country": {
+          "id": "bill_to_address_country",
+          "type": "string"
+        },
+        "bill_to_address_postal_code": {
+          "id": "bill_to_address_postal_code",
+          "type": "string"
+        },
+        "unsigned_field_names": {
+          "id": "unsigned_field_names",
+          "type": "string"
+        },
+        "required": [
+          "access_key",
+          "profile_id",
+          "transaction_uuid",
+          "signed_date_time",
+          "locale",
+          "transaction_type",
+          "reference_number",
+          "amount",
+          "currency",
+          "payment_method",
+          "bill_to_forename",
+          "bill_to_surname",
+          "bill_to_email",
+          "bill_to_phone",
+          "bill_to_address_line1",
+          "bill_to_address_city",
+          "bill_to_address_state",
+          "bill_to_address_country",
+          "bill_to_address_postal_code"
+          ]
+      }
+    }
+  }
+}

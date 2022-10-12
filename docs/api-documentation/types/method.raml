@@ -1,0 +1,11 @@
+#%RAML 1.0 ObjectField
+type: object
+properties:
+  type:
+    type: SupportedMethods
+    required: true
+  name:
+    type: string
+  enabled: boolean
+  ui_url: string
+example: !include /examples/method.json

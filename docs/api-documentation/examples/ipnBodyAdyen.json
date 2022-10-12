@@ -1,0 +1,36 @@
+{
+    "live": "false",
+    "notificationItems": [{
+        "NotificationRequestItem": {
+            "additionalData": {
+                "authCode": "5295",
+                "avsResult": "4 AVS not supported for this card type",
+                "cardSummary": "6688",
+                "refusalReasonRaw": "AUTHORISED",
+                "authorisationMid": "1000",
+                "acquirerAccountCode": "TestPmmAcquirerAccount",
+                "cvcResult": "1 Matches",
+                "expiryDate": "08\\/2018",
+                "avsResultRaw": "4",
+                "paymentMethod": "hipercard",
+                "cvcResultRaw": "1",
+                "paymentMethodVariant": "hipercard",
+                "acquirerCode": "TestPmmAcquirer",
+                "acquirerReference": "7CA6AUTSIJT"
+            },
+            "amount": {
+                "currency": "BRL",
+                "value": 90000
+            },
+            "eventCode": "AUTHORISATION",
+            "eventDate": "2016-08-29T17:58:26+02:00",
+            "merchantAccountCode": "TrocafoneBR",
+            "merchantReference": "adyen-232-4asfa-13",
+            "operations": ["CANCEL", "CAPTURE", "REFUND"],
+            "paymentMethod": "hipercard",
+            "pspReference": "8814724863062563",
+            "reason": "5295:6688:08\\/2018",
+            "success": "true"
+        }
+    }]
+}

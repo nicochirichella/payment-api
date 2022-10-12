@@ -1,0 +1,60 @@
+{
+    "payment_method_id": "bolbradesco",
+    "description": "Samsung Galaxy Mega Duos Preto (Bom)",
+    "statement_descriptor": "TROCAFONE",
+    "external_reference": "0123-payment-ref",
+    "binary_mode": false,
+    "transaction_amount": 42.23,
+    "notification_url": "https://www.test.com/tentant/v1/gateways/mercadopago/ipn",
+    "payer": {
+        "address": {
+            "street_name": "Calle Loca",
+            "street_number": "1234C",
+            "zip_code": "23970000",
+            "city": "City",
+            "federal_unit": "SC",
+            "neighborhood": "District"
+        },
+        "email": "test@test.com",
+        "identification": {
+            "number": "32938606000169",
+            "type": "CNPJ"
+        },
+        "first_name": "SO FESTA SUPERMERCADO LTDA",
+        "last_name": "SO FESTA SUPERMERCADO LTDA",
+        "entity_type": "association"
+    },
+    "additional_info": {
+        "items": [
+            {
+                "title": "Samsung Galaxy Mega Duos Preto (Bom)",
+                "description": "Samsung Galaxy Mega Duos Preto (Bom)",
+                "category_id": "services",
+                "quantity": 1,
+                "unit_price": 34.2
+            }
+        ],
+        "shipments": {
+            "receiver_address": {
+                "zip_code": "S2397000",
+                "street_number": "S1234C",
+                "street_name": "SCalle Loca",
+                "floor": "SComplement",
+                "apartment": null
+            }
+        },
+        "payer": {
+            "phone": {
+                "area_code": "",
+                "number": "1234567890"
+            },
+            "address": {
+                "street_name": "Calle Loca",
+                "street_number": "1234C",
+                "zip_code": "23970000"
+            },
+            "first_name": "SO FESTA SUPERMERCADO LTDA",
+            "last_name": ""
+        }
+    }
+}

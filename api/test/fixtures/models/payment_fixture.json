@@ -1,0 +1,36 @@
+{
+    "id": 10,
+    "client_order_reference": "CLIENT_ORDER_REFERENCE",
+    "client_reference": "CLIENT_PAYMENT_REFERENCE",
+    "gateway_reference": "GATEWAY_REFRENCE",
+    "payment_method_id": 10,
+    "type": "creditCard",
+    "installments": 1,
+    "buyer_id": 22,
+    "amount": 1900.20,
+    "interest": 1.00,
+    "currency": "BRL",
+    "status_id": "succeed",
+    "status_detail": "ok",
+    "tenant_id": 100,
+    "retried_with_payment_id": null,
+    "payment_information": {
+        "processor": "visa",
+        "firstSixDigits": "123456",
+        "lastFourDigits": "1234",
+        "holderDocumentNumber": "35111931"
+    },
+    "metadata": {
+        "extra": "data",
+        "payments": [
+            {
+                "one": 1
+            },
+            {
+                "two": 2
+            }
+        ]
+    },
+    "created_at": "1992-05-13T14:47:06.000-04:00",
+    "updated_at": "1992-05-14T14:47:06.000-04:00"
+}

@@ -1,0 +1,8 @@
+<merchantID>trocafone_br</merchantID>
+<merchantReferenceCode>0123-payment-ref</merchantReferenceCode>
+<clientLibrary>node</clientLibrary>
+<clientLibraryVersion>version</clientLibraryVersion>
+<clientEnvironment>osInfo</clientEnvironment>
+<voidService run="true">
+<voidRequestID>CAPTURE_REQUEST_ID</voidRequestID>
+</voidService>

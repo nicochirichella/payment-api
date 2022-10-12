@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "delivery",
+  "type": "object",
+  "properties": {
+    "type": {
+      "id": "type",
+      "type": "string"
+    },
+    "estimated_time": {
+      "id": "estimated_time",
+      "type": "number"
+    }
+  },
+  "required": [
+    "type",
+    "estimated_time"
+  ]
+}

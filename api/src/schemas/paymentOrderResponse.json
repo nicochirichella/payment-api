@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Payment Response",
+  "type": "object",
+  "properties": {
+    "action": { "$ref": "actionRedirect.json"},
+    "paymentOrder": {"$ref": "paymentOrder.json"}
+  },
+  "required": [
+    "action",
+    "paymentOrder"
+  ]
+}

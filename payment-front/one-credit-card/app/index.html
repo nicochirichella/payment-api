@@ -1,0 +1,81 @@
+<!doctype html>
+<html style="overflow: hidden;">
+  <head>
+    <meta charset="utf-8">
+    <title>Trocafone Checkout</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
+    <script type="text/javascript">window._trackJs = { token: 'fe03fb4b4f2544f889e2e0206b0c6999' };</script>
+    <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+    <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css" /> 
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-ui-mask/dist/mask.js"></script>
+    <script src="bower_components/angular-ui-select/dist/select.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/querystring/querystring.min.js"></script>
+    <script src="bower_components/uuid.js/src/uuid.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/nonstrict-vendor.js -->
+    <script src="scripts/integrations/adyen.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body ng-app="oneCreditCardApp" ng-cloack>
+
+    <div ng-controller="MainCtrl">
+        <div ng-if="configLoaded && configSucceed" class="container" ng-include="'views/credit-card.html'" ng-class="{'is-mobile': isMobile, 'apply-steps': abTesting}" ></div>
+        <div ng-if="configLoaded && !configSucceed" ng-include="'views/error-api.html'"></div>
+    </div>
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/constants/config/envs.js"></script>
+    <script src="scripts/constants/is_mobile.js"></script>
+    <script src="scripts/constants/mock_pm.js"></script>
+    <script src="scripts/constants/formatters.js"></script>
+    <script src="scripts/services/payment-method.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/credit-card.js"></script>
+    <script src="scripts/models/processor.js"></script>
+    <script src="scripts/models/null-processor.js"></script>
+    <script src="scripts/models/null-installments.js"></script>
+    <script src="scripts/models/credit-card.js"></script>
+    <script src="scripts/services/interframe-communication.js"></script>
+    <script src="scripts/services/config.js"></script>
+    <script src="scripts/directives/update-height.js"></script>
+    <script src="scripts/filters/repeat.js"></script>
+    <script src="scripts/directives/show-errors.js"></script>
+    <script src="scripts/directives/colorize-placeholder.js"></script>
+    <script src="scripts/directives/convert-to-number.js"></script>
+    <script src="scripts/directives/show-date-errors.js"></script>
+    <script src="scripts/directives/check-credit-card.js"></script>
+    <script src="scripts/services/credit-card-formatter.js"></script>
+    <script src="scripts/services/mercadopago-sdk.js"></script>
+    <script src="scripts/services/adyen-encryption.js"></script>
+    <script src="scripts/services/cybersource-token.js"></script>
+    <script src="scripts/services/cybersource-script.js"></script>
+
+    <!-- endbuild -->
+</body>
+</html>

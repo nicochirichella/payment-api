@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Rejection request",
+  "id": "rejectionRequest",
+  "type": "object",
+  "properties": {
+    "clientReference": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "clientReference", "reason"
+  ]
+}

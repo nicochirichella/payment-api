@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.examples.com/wsdl/HelloService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap:Body>
+    <tns:sayHello>
+      <likes>
+        <tns:likes>
+          <id>1</id>
+        </tns:likes>
+        <tns:likes>
+          <id>2</id>
+        </tns:likes>
+      </likes>
+      <firstName>John</firstName>
+      <lastName>Doe</lastName>
+    </tns:sayHello>
+  </soap:Body>
+</soap:Envelope>

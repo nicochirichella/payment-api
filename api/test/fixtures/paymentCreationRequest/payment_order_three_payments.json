@@ -1,0 +1,134 @@
+{
+  "requestData": {
+    "returnUrl": "https://google.com",
+    "cancelCheckoutURL": "https://hotmail.com"
+  },
+
+  "paymentOrder": {
+    "purchaseReference": "PURCHASE_REFERENCE",
+    "reference": "PAYMENT_API_REFERENCE",
+    "paymentMethod" : "TYPEA",
+    "currency": "BRL",
+
+    "metadata": {
+      "delivery": {
+        "type": "normal",
+        "estimated_time": 6
+      }
+    },
+
+    "payments": [
+      {
+        "installments": 6,
+        "amountInCents": 30000,
+        "interestInCents": 3000,
+        "type": "creditCard",
+
+        "paymentInformation": {
+          "processor": "visa",
+          "lastFourDigits": 1234,
+          "firstSixDigits": 123456,
+          "holderDocumentNumber": "40111222"
+        },
+
+        "encryptedCreditCards": [{
+          "encryptedContent": "{{credit_card_token}}",
+          "encryptionType": "mercadopagoToken"
+        }]
+      },
+      {
+        "installments": 6,
+        "amountInCents": 30000,
+        "interestInCents": 3000,
+        "type": "creditCard",
+
+        "paymentInformation": {
+          "processor": "visa",
+          "lastFourDigits": 1234,
+          "firstSixDigits": 123456,
+          "holderDocumentNumber": "40111222"
+        },
+
+        "encryptedCreditCards": [{
+          "encryptedContent": "{{credit_card_token}}",
+          "encryptionType": "mercadopagoToken"
+        }]
+      },
+      {
+        "installments": 6,
+        "amountInCents": 40000,
+        "interestInCents": 4000,
+        "type": "creditCard",
+
+        "paymentInformation": {
+          "processor": "visa",
+          "lastFourDigits": 1234,
+          "firstSixDigits": 123456,
+          "holderDocumentNumber": "40111222"
+        },
+
+        "encryptedCreditCards": [{
+          "encryptedContent": "{{credit_card_token}}",
+          "encryptionType": "mercadopagoToken"
+        }]
+      }
+    ],
+
+    "shoppingCart": {
+      "items": [
+        {
+          "name": "Nome do Produto de Teste",
+          "reference": "Referencia 121232",
+          "discountAmountInCents": 10000,
+          "totalCostInCents": 100000,
+          "unitCostInCents": 110000,
+          "quantity": 1,
+          "details": {
+            "brand": "Sony",
+            "model": "Sony  Xperia",
+            "has_charger": true,
+            "storage": "16GB",
+            "condition": "Bom"
+          }
+        }
+      ],
+      "totalCostInCents": 100000
+    },
+
+    "buyer": {
+      "reference": "A2B3C4",
+      "type": "person",
+      "name": "Alexandre B.",
+      "gender": "M",
+      "birthDate": "1995-01-31",
+      "documentNumber": "16862369210",
+      "documentType": "CPF",
+      "email": "teste@teste.com",
+      "phone": "2199999999",
+      "ipAddress": "192.168.0.100",
+      "billingAddress": {
+        "city": "BRio de Janeiro",
+        "district": "BCentro",
+        "country": "Brazil",
+        "complement": "BTeste de complemento",
+        "number": "B12123",
+        "zipCode": "11111",
+        "stateCode": "BRJ",
+        "state": "BRio de Janeiro",
+        "street": "BRua de Teste"
+      },
+
+      "shippingAddress": {
+        "city": "SRio de Janeiro",
+        "district": "SCentro",
+        "country": "Brazil",
+        "complement": "STeste de complemento",
+        "number": "S12123",
+        "zipCode": "9999",
+        "stateCode": "SRJ",
+        "state": "SRio de Janeiro",
+        "street": "SRua de Teste"
+      }
+    }
+  }
+}

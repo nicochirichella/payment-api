@@ -1,0 +1,1 @@
+ALTER TABLE failed_ipns RENAME COLUMN client_payment_reference TO client_reference;

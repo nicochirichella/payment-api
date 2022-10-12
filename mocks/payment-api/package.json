@@ -1,0 +1,13 @@
+{
+  "name": "payment-api-mock",
+  "version": "0.0.1",
+  "description": "This is a mock server for payment-api. Generated using MockServer: http://www.mock-server.com/",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "mockserver-client": "~1",
+    "mockserver-grunt": "~1"
+  },
+  "author": "",
+  "license": "ISC"
+}

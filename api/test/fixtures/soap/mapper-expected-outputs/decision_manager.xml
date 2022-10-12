@@ -1,0 +1,63 @@
+<merchantID>trocafone_br</merchantID>
+<merchantReferenceCode>0123-payment-ref</merchantReferenceCode>
+<clientLibrary>node</clientLibrary>
+<clientLibraryVersion>version</clientLibraryVersion>
+<clientEnvironment>osInfo</clientEnvironment>
+<billTo>
+<firstName>Fulanito Manguito</firstName>
+<lastName>Detal</lastName>
+<street1>Calle Loca 1234C</street1>
+<street2>Complement</street2>
+<city>City</city>
+<county>District</county>
+<state>SC</state>
+<postalCode>23970000</postalCode>
+<country>BR</country>
+<phoneNumber>1234567890</phoneNumber>
+<email>test@test.com</email>
+<ipAddress>100.200.100.200</ipAddress>
+<dateOfBirth>1980-12-10</dateOfBirth>
+<personalID>000111222333</personalID>
+</billTo>
+<shipTo>
+<firstName>Fulanito Manguito</firstName>
+<lastName>Detal</lastName>
+<street1>SCalle Loca S1234C</street1>
+<street2>SComplement</street2>
+<city>SCity</city>
+<county>SDistrict</county>
+<state>SSC</state>
+<postalCode>S2397000</postalCode>
+<country>BR</country>
+<phoneNumber>1234567890</phoneNumber>
+<email>test@test.com</email>
+</shipTo>
+<item id="0">
+<unitPrice>34.2</unitPrice>
+<quantity>1</quantity>
+</item>
+<purchaseTotals>
+<currency>CUR</currency>
+<grandTotalAmount>42.23</grandTotalAmount>
+</purchaseTotals>
+<recurringSubscriptionInfo>
+<subscriptionID>CYBERSOURCE_PAYMENT_TOKEN</subscriptionID>
+</recurringSubscriptionInfo>
+<merchantDefinedData>
+<mddField id="1">Sony</mddField>
+<mddField id="2">Sony  Xperia Z ULTRA</mddField>
+<mddField id="3">true</mddField>
+<mddField id="4">normal</mddField>
+<mddField id="5">6</mddField>
+<mddField id="6">creditCard</mddField>
+<mddField id="7">No</mddField>
+<mddField id="8">8</mddField>
+<mddField id="9">false</mddField>
+<mddField id="10">M</mddField>
+<mddField id="11">16GB</mddField>
+<mddField id="12">Bom</mddField>
+<mddField id="13">person</mddField>
+<mddField id="14">35111931</mddField>
+</merchantDefinedData>
+<afsService run="true"></afsService>
+<deviceFingerprintID>TROCAFONE_BR12345678</deviceFingerprintID>

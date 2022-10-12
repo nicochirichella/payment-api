@@ -1,0 +1,360 @@
+.credit-card-form {
+
+    .payment-container {
+        border-bottom: 1px solid $gray-2;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+
+        &:last-child {
+            border:none;
+            padding-bottom:0;
+            margin-bottom: 0;
+        }
+
+    }
+    .payment-subtitle {
+        padding: 5px 0 10px 0;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+
+    .form-group-checkout-left{
+        width: 33%;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 15px;
+        padding-right: 0;
+        text-align: right;
+        @include fontSize(smaller);
+    }
+
+
+    .form-group-checkout-right{
+        width: calc(67% - 50px);
+        margin-right: 15px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+
+    select.form-control {
+        -webkit-appearance: none;
+        background: url('../images/checkout-dropdown-arrow.png');
+        background-position: 96% 50%;
+        background-repeat: no-repeat;
+        @include fontSize(smaller);
+        @include fontWeight(semibold);
+        &:focus{
+            border-color: $primary-dark;
+            outline: 0;
+            box-shadow:1px 1px 2px rgba(0,0,0,.25)!important;
+            filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=1, Color='#000000');
+        }
+    }
+    .form-group {
+        input.ui-select-search.ui-select-search-hidden{
+            height: 0px;
+        }
+    
+        .help-quote {
+            display: block;
+            color: #aaa;
+            margin-top: 5px;
+            padding-right: 10px;
+            @include fontSize(smaller);
+            margin-left: calc(33% + 35px);
+
+            &.highlight {
+                color: $primary-dark;
+                @include fontWeight(bold);
+            }
+        }
+
+        &.security-code {
+            input {
+                width: calc(50% - 2px);
+                display: inline-block;
+            }
+
+            .help-btn {
+                i  {
+                    color: $primary-dark;
+                    @include fontSize(small);
+                    position: relative;
+                    padding: 3px;
+
+                    &:hover .card-image-popover {
+                        opacity: 1;
+                        visibility: visible;
+                        display: block;
+                    }
+
+                    .card-image-popover {
+                        display: none;
+                        position: absolute;
+                        top: 26px;
+                        margin-top: 5px;
+                        left: -10px;
+                        background-color: $white;
+                        padding: 8px;
+                       
+                        box-shadow: 2px 2px 4px rgba(0,0,0,.3);
+                        border: 1px solid $gray-2;
+                        transition: all .4s linear;
+                        -webkit-transition: all .4s linear;
+                        -moz-transition: all .4s linear;
+                        -ms-transition: all .4s linear;
+                        -o-transition: all .4s linear;
+                        opacity: 0;
+                        visibility: hidden;
+                        z-index: 2;
+
+                        &:before {
+                            content: ' ';
+                            position: absolute;
+                            border: 9px solid transparent;
+                            border-bottom-color: $gray-2;
+                            top: -18px;
+                            left: 8px;
+                        }
+
+                        &:after {
+                            content: ' ';
+                            position: absolute;
+                            border: 7px solid transparent;
+                            border-bottom-color: $white;
+                            top: -14px;
+                            left: 10px;
+                        }
+
+                        .credit-card {
+                            display: block;
+                            background-image: url(../images/credit-card-back.png);
+                            width: 75px;
+                            height: 50px;
+                        }
+
+                        .credit-card.front{
+                            background-image: url(../images/credit-card-front.png);
+                        }
+                    }
+                }
+            }
+        }
+        .credit-img-block{
+            margin-left: calc(33% + 35px);
+        }
+
+        img.processor {
+            -webkit-filter: grayscale(1);
+            -webkit-filter: grayscale(100%);
+            border-color: transparent;
+            opacity: .5;
+            filter: alpha(opacity=50);
+            float: left;
+            margin: 5px 1px 0 0;
+            padding: 2px;
+           
+            height: 17px;
+
+            &.active {
+                border: 1px solid $gray-5;
+                -webkit-filter: grayscale(0);
+                -webkit-filter: grayscale(0%);
+                opacity: 1;
+                filter: alpha(opacity=1);
+            }
+        }
+
+         .col-pl-2 {
+            padding-left: 2px;
+            padding-right: 0;
+        }
+
+        .col-pr-2 {
+            padding-right: 2px;
+            padding-left:0;
+        }
+    } 
+    .js-checkout-mpcc-installments-row{
+        .ui-select-dropdown {            
+            overflow-x: auto;
+            @media (min-width:296px) and (max-width: 560px){
+                left: auto;
+                right: 0;
+                width: 283px;
+            }
+            @media (min-width:130px) and (max-width: 295px){
+                left: auto;
+                right: 0;
+                width: 283px;
+            }
+        }
+        .ui-select-bootstrap .ui-select-match-text{
+            overflow: hidden;
+            width: 95%;
+        }
+        .ui-select-choices-row-inner{
+            @include fontSize(smaller);
+        }
+    }
+     div[disabled^="disabled"].ui-select-bootstrap{
+            .btn-default:hover{
+                background: #eee;
+                border-color: $gray-5;
+                box-shadow: none;
+            }
+    }
+    .ui-select-bootstrap{
+        input.form-control{
+            width: 100% !important;
+            height: 34px;
+
+            &:focus{
+             outline: 0 !important;
+             border-color: $primary-dark;
+             box-shadow:none;
+           }
+        }
+    
+        .ui-select-match:focus, .ui-select-container:focus{
+             outline: 0 !important;
+             box-shadow:none;
+        }
+
+        .text-muted{
+            color:$gray-5;
+        }
+        &.open{
+            input.form-control{
+            width: 100% !important;
+            padding-right:20px;
+            background-position: 93% center;
+            background: url('../images/checkout-dropdown-arrow-hover.png');
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+           }
+        }
+        .btn-default.active, .btn-default:active, .btn-default:focus, .btn-default:hover{
+            background: $white;
+            border-color: $gray-5;
+            box-shadow: none;
+        }
+        .caret{
+            background: url('../images/checkout-dropdown-arrow.png');
+            background-position: 100% 50%;
+            width: 13px;
+            border: none;
+            height: 11px;
+            background-repeat: no-repeat;
+            right: 8px;
+            top: calc(50% - 4px);
+            pointer-events: none;
+        }
+        .ui-select-choices{
+            margin:0;
+            border: none;
+            padding: 0;
+            @include fontSize(small);
+            background: darken($white, 3);
+            min-width: 20px;
+
+            > li > a{
+                outline: 0;
+            }
+
+
+            .ui-select-choices-row.active > span{
+                background: $gray-4;
+                color: $gray-7;
+            }
+
+            .ui-select-choices-row:hover > span{
+                background: $primary-dark;
+                color:$white;
+            }
+        }
+    }
+
+    select {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -webkit-border-radius: $rounded-corners-medium;
+        border-radius: $rounded-corners-medium;
+        padding: 5px 10px;
+        @include fontSize(small);
+        @include fontWeight(normal);
+        border: 1px solid $gray-4;
+        background-color: $white;
+        width: 100%;
+        background: $white;
+        background-image: url('data:image/png;base64,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');
+        background-repeat: no-repeat;
+        background-position: right 6px top 12px;
+        background-size: 16px;
+        outline: none;
+        padding: 8px 12px;
+       
+
+        &.placeholder-color{
+            color:$gray-6;
+        }
+    }
+    .form-horizontal .control-label {
+        padding: 0;
+    }
+}
+.apply-steps{
+    .form-horizontal .form-group{
+        margin: 0 0 20px 0;
+    }
+    input.form-control{
+        padding: 12px 15px;
+        height: 44px;
+    }
+
+    .credit-card-form .form-group-checkout-left{
+        width: 100%;
+        text-align: left;
+        margin: 0 0 5px 0;
+        @include fontSize(base);
+        @include fontWeight(normal);
+    }
+    .credit-card-form .form-group-checkout-right{
+        width: 100%;
+        text-align: left;
+    }
+    .credit-card-form .form-group .credit-img-block{
+        margin-left: 0;
+    }
+    .credit-card-form .form-group .help-quote{
+        margin-left: 0;
+    }
+
+    .form-group .help-block{
+        margin-left: 0;
+    }
+
+    //select
+    .ui-select-bootstrap .form-control {
+        height: 44px;
+        padding: 12px 15px;
+        @include fontSize(small);
+        @include fontWeight(normal);
+    }
+    .credit-card-form .ui-select-bootstrap input.form-control{
+        height: 44px;
+    }
+    .ui-select-bootstrap .ui-select-choices-row>span{
+        padding: 14px 10px;
+    }
+
+    .credit-card-form .form-group input.ui-select-search.ui-select-search-hidden{
+        height: 0;
+        padding:0;
+    }
+    .credit-card-form .ui-select-bootstrap .ui-select-choices{
+        width:100%;
+    }
+}

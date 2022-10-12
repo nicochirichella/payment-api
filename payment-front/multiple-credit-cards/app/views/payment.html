@@ -1,0 +1,45 @@
+<ng-form id="order-form" name="pf" class="form-horizontal credit-card-form" novalidate>
+    <label class="payment-subtitle">{{indexMap[payment.index]}} pagamento</label>
+    <div class="form-group" show-errors="amount">
+        <label for="amount" class="form-group-checkout-left control-label">Valor (R$)</label>
+        <div class="form-group-checkout-right">
+            <input type="number"
+                   name="amount"
+                   class="form-control"
+                   ng-model="payment.amount"
+                   ng-disabled="$last"
+                   min="1"
+                   max="{{order.totalAmount - 1}}"
+                   ng-required="true"
+                   ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }"
+                   ng-change="paymentUpdated()"
+            />
+        </div>
+        <div class="help-block" role="alert">
+            <div ng-show="pf.amount.$error.max">A quantidade es demasiado grande.</div>
+            <div ng-show="pf.amount.$error.min">A quantidade es demasiado pequena.</div>
+            <div ng-show="pf.amount.$error.required">Campo obrigatório.</div>
+        </div>
+    </div>
+    <credit-card-form credit-card="payment.creditCard" pf="pf"></credit-card-form>
+    <div class="js-checkout-mpcc-installments-row form-group" show-errors="installments">
+    <label for="installments" class="form-group-checkout-left control-label">Parcelas</label>
+    <div class="form-group-checkout-right">
+        <input type="hidden" class="form-control" name="installments" ng-required="true" ng-model="payment.installments"/>
+        <ui-select ng-model="payment.installments"
+                   ng-required="true"
+                   ng-disabled="payment.creditCard.installmentsList().length <= 1"
+                   search-enabled="false"
+        >
+            <ui-select-match placeholder="Escolha...">{{ ($select.selected && $select.selected.installments) ? formatInstallment($select.selected) : "Escolha..." }}</ui-select-match>
+            <ui-select-choices repeat="installment in payment.creditCard.installmentsList()">
+                <div>{{ formatInstallment(installment) }}</div>
+            </ui-select-choices>
+        </ui-select>
+    </div>
+    <div class="help-block" role="alert">
+        <div ng-show="ccf.installments.$error.required">Campo obrigatório</div>
+    </div>
+        <span class="help-quote highlight">&gt; Até 12 parcelas sem juros</span>
+    </div>
+</ng-form>

@@ -1,0 +1,87 @@
+#%RAML 1.0
+title: payment-api
+version: v1
+baseUri: http://payment.trocafone.com/{tenantId}
+
+types:
+  SupportedMethods:
+    type: string
+    enum: [ 1TCMundiPagg ]
+  PaymentStatuses:
+    type: string
+    enum: [ pending, successfull, cancelled, rejected, refunded, partialRefund, inMediation, chargedBack ]
+  PaymentTypes:
+    type: string
+    enum: [ creditCard, invoice ]
+  Error: !include types/error.raml
+  Method: !include types/method.raml
+  Payment:
+    type: object
+    example: !include examples/payment.json
+  PaymentRequest: !include types/paymentRequest.raml
+  PaymentRequestResponse: !include types/paymentRequestResponse.raml
+
+/methods:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            type: Method []
+  /{type}:
+    get:
+        responses:
+          200:
+            body:
+              application/json:
+                type: Method
+    put:
+      body:
+        application/json:
+          type: Method
+      responses:
+        200:
+
+/payments:
+    post:
+      body:
+        application/json:
+          type: PaymentRequest
+
+      responses:
+        201:
+          description: Payment created succefully
+          body:
+            application/json:
+              type: PaymentRequestResponse
+        400:
+          body:
+            application/json:
+              type: Error
+        401:
+          body:
+            application/json:
+              type: Error
+        500:
+          body:
+            application/json:
+              type: Error
+    /{id}:
+        get:
+          body:
+            application/json:
+              type: Payment
+        /cancel:
+          post:
+            description: cancel the payment
+            responses:
+              200:
+              412:
+              404:
+        /charge-back:
+          post:
+            description: Charge-back the payment
+            responses:
+              200:
+              412:
+              404:

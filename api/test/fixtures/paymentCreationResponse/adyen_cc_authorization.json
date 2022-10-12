@@ -1,0 +1,21 @@
+{
+  "data": {
+    "additionalData": {
+      "cvcResult": "1 Matches",
+      "authCode": "59753",
+      "avsResult": "4 AVS not supported for this card type",
+      "avsResultRaw": "4",
+      "paymentMethod": "mc",
+      "cvcResultRaw": "1",
+      "refusalReasonRaw": "AUTHORISED",
+      "paymentMethodVariant": "bijcard",
+      "authorisationMid": "1000",
+      "acquirerCode": "TestPmmAcquirer",
+      "acquirerReference": "7F54OQBP38Q",
+      "acquirerAccountCode": "TestPmmAcquirerAccount"
+    },
+    "pspReference": "EXTERNAL_REFERENCE",
+    "resultCode": "Authorised",
+    "authCode": "AUTH_CODE"
+  }
+}

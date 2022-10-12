@@ -1,0 +1,42 @@
+{
+  "additionalData": {
+    "card.encrypted.json": "ENCRYPTION_ADYEN_STRING"
+  },
+  "amount": {
+    "value": 4422,
+    "currency": "CUR"
+  },
+  "installments" : {
+    "value" : 4
+  },
+  "reference": "0123-payment-ref",
+  "merchantAccount": "merchantAccountAdyen",
+  "shopperIP": "100.200.100.200",
+  "shopperEmail": "test@test.com",
+  "deliveryAddress": {
+    "street": "SCalle Loca",
+    "houseNumberOrName": "S1234C",
+    "city": "SCity",
+    "postalCode": "S2397000",
+    "stateOrProvince": "SState",
+    "country": "BR"
+  },
+  "billingAddress": {
+    "street": "Calle Loca",
+    "houseNumberOrName": "1234C",
+    "city": "City",
+    "postalCode": "23970000",
+    "stateOrProvince": "State",
+    "country": "BR"
+  },
+  "dateOfBirth": "1980-12-10T00:00:00Z",
+  "shopperName": {
+    "firstName": "Fulanito Manguito",
+    "lastName": "Detal",
+    "gender": "MALE",
+    "infix": ""
+  },
+  "socialSecurityNumber": "000111222333",
+  "telephoneNumber": "1234567890",
+  "merchantOrderReference": "0123-order-ref"
+}

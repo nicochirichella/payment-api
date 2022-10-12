@@ -1,0 +1,32 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "strict": [
+      "error",
+      "never"
+    ],
+    "prefer-destructuring": "off",
+    "no-param-reassign": "warn",
+    "arrow-body-style": "off",
+    "global-require": "off",
+    "class-methods-use-this": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 150
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "none"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+ALTER TABLE gateway_methods ADD COLUMN payment_ttl_include_weekends boolean not null DEFAULT true;

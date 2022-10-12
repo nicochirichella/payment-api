@@ -1,0 +1,71 @@
+{
+  "requestData": {
+    "additionalInfo": {
+      "creditCard": {
+        "brand": "VISA",
+        "number": 230000000000,
+        "expirationMonth": 12,
+        "expirationYear": 19,
+        "securityCode": 555,
+        "holderName": "Fulanito De Tal"
+      }
+    }
+  },
+
+  "payment": {
+    "clientOrderReference": "53ebb6400-9881-4274-9",
+    "clientPaymentReference": "B12-fasfasfASf-232-4asfa-0",
+    "paymentMethod" : "MUNDIPAGG_ONE_CC",
+    "installments": 1,
+    "currency": "BRL",
+
+    "shoppingCart": {
+      "items": [
+        {
+           "name": "Nome do Produto de Teste",
+           "reference": "Referencia 121232",
+           "discountAmountInCents": 10000,
+           "totalCostInCents": 90000,
+           "unitCostInCents": 100000,
+           "quantity": 1
+         }
+      ],
+      "totalCostInCents": 90000
+    },
+
+    "buyer": {
+      "reference": "A2B3C4",
+      "type": "person",
+      "name": "Alexandre B.",
+      "gender": "M",
+      "birthDate": "2005-01-31",
+      "documentNumber": "16862369210",
+      "documentType": "CPF",
+      "email": "teste@teste.com",
+      "phone": "2199999999",
+      "ipAddress": "192.168.0.100",
+      "billingAddress": {
+        "city": "Rio de Janeiro",
+        "district": "Centro",
+        "country": "Brazil",
+        "complement": "Teste de complemento",
+        "number": "12123",
+        "zipCode": "12123321",
+        "state": "Rio de Janeiro",
+        "stateCode": "RJ",
+        "street": "Rua de Teste"
+      },
+      "shippingAddress": {
+        "city": "Rio de Janeiro",
+        "district": "Centro",
+        "country": "Brazil",
+        "complement": "Teste de complemento",
+        "number": "12123",
+        "zipCode": "12123321",
+        "state": "Rio de Janeiro",
+        "stateCode": "RJ",
+        "street": "Rua de Teste"
+      }
+     }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "payments-backend-front",
+  "version": "0.0.0",
+  "homepage": "https://github.com/trocafone/payment-api",
+  "authors": [
+    "Alan Szpigiel <alanszp@gmail.com>"
+  ],
+  "description": "Backoffice Front for payments",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "AngularJS": "angular-latest#~1.4.7",
+    "jquery": "~2.1.4",
+    "angular-ui-router": "~0.2.15"
+  }
+}

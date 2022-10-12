@@ -1,0 +1,20 @@
+{
+   "schema": "http://json-schema.org/draft-04/schema#",
+   "title": "Error",
+   "type": "object",
+   "properties": {
+     "message": {
+       "type": "string",
+       "description": "Error description"
+     },
+     "code": {
+       "type": "integer",
+       "description": "Error code"
+     },
+     "origin": {
+       "type": "string",
+       "description": "Error description"
+     }
+   },
+   "required": ["message", "code"]
+}

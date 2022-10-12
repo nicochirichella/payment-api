@@ -1,0 +1,44 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  input,
+  button,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  img{
+    border: 0;
+  }
+  figure {
+    margin: 0;
+  }
+  img {
+    vertical-align: middle;
+  }
+  html{
+    font-size: $main-font-size;
+  }
+  body {
+    font-family: $font-family-base;
+    font-size: $main-font-size;
+    color: $font-color-dark;
+    -webkit-font-smoothing: antialiased;
+  }

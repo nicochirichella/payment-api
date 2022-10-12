@@ -1,0 +1,36 @@
+{
+  "merchantID": "trocafone_br",
+  "merchantReferenceCode": "0123-payment-ref",
+  "clientLibrary": "Node",
+  "clientLibraryVersion": "version",
+  "clientEnvironment": "OS Info",
+  "billTo": {
+    "firstName": "Fulanito Manguito",
+    "lastName": "Detal",
+    "street1": "Calle Loca 1234C",
+    "street2": "Complement",
+    "city": "City",
+    "county": "District",
+    "phone": "1234567890",
+    "state": "SC",
+    "postalCode": "23970000",
+    "country": "BR",
+    "email": "test@test.com",
+    "ipAddress": "100.200.100.200",
+    "dateOfBirth": "1980-12-10",
+    "personalID": "000111222333"
+  },
+  "item": {
+    "attributes": {
+      "id": "0"
+    },
+    "unitPrice": 34.20,
+    "quantity": 1
+  },
+  "purchaseTotals": {
+    "currency": "BRL"
+  },
+  "recurringSubscriptionInfo": {
+    "subscriptionID": "CYBERSOURCE_PAYMENT_TOKEN"
+  }
+}

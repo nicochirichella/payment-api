@@ -1,0 +1,51 @@
+{
+  "data" :
+  {
+    "ErrorReport": null,
+    "InternalTime": 326,
+    "MerchantKey": "MERCHANT_KEY",
+    "RequestKey": "EXTERNAL_REFERENCE",
+    "BoletoTransactionResultCollection": [
+      
+    ],
+    "BuyerKey": "BUYER_KEY",
+    "CreditCardTransactionResultCollection": [
+      {
+        "AcquirerMessage": "Stone|0000",
+        "AcquirerName": "Stone",
+        "AcquirerReturnCode": "APPR",
+        "AffiliationCode": "AFFILIATION_CODE",
+        "AmountInCents": 10000,
+        "AuthorizationCode": "AUTH_CODE",
+        "AuthorizedAmountInCents": 10000,
+        "CapturedAmountInCents": null,
+        "CapturedDate": null,
+        "CreditCard": {
+          "CreditCardBrand": "Visa",
+          "InstantBuyKey": "INSTANT_BUY_KEY",
+          "IsExpiredCreditCard": false,
+          "MaskedCreditCardNumber": "444444****4444"
+        },
+        "CreditCardOperation": "AuthOnly",
+        "CreditCardTransactionStatus": "AuthorizedPendingCapture",
+        "DueDate": null,
+        "EstablishmentCode": null,
+        "ExternalTime": 1250,
+        "PaymentMethodName": "Stone",
+        "RefundedAmountInCents": null,
+        "Success": true,
+        "TransactionIdentifier": "TRANSACTION_IDENTIFIER",
+        "TransactionKey": "TRANSACTION_KEY",
+        "TransactionKeyToAcquirer": "TRANSACTION_KEY_TO_ACQUIRER",
+        "TransactionReference": "EXTERNAL_REFERENCE",
+        "UniqueSequentialNumber": "123456789",
+        "VoidedAmountInCents": null
+      }
+    ],
+    "OrderResult": {
+      "CreateDate": "2016-02-01T21:07:58",
+      "OrderKey": "4c314bd9-1234-1234-1234-4a75c1d95c2a",
+      "OrderReference": "4613b21312341234123409a13433e113123"
+    }
+  }
+}

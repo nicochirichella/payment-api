@@ -1,0 +1,48 @@
+//FONTS
+
+$font-family-base: 'Open Sans', sans-serif;
+$font-family-title: 'Montserrat', 'Open Sans', sans-serif;
+$main-font-size: 16px;
+$font-color-dark: #404040;
+$font-color-light: $white;
+
+//
+//  rems $16px
+//mega      40px
+//huge      35px
+//giant     30px
+//jumbo     25px
+//biggest   22px
+//bigger    19px
+//big       17px
+//base      15px
+//small     13px
+//smaller   11px
+//smallest  10px
+//micro      9px
+//nano       7px
+
+
+$modular-font-size: (
+    mega: 2.469rem,
+    huge: 2.168rem,
+    giant: 1.905rem,
+    jumbo: 1.568rem,
+    biggest: 1.377rem,
+    bigger: 1.21rem,
+    big: 1.063rem,
+    base: 0.933rem,
+    small: 0.82rem,
+    smaller: 0.675rem,
+    smallest: 0.632rem,
+    micro: 0.556rem,
+    nano: 0.457rem
+);
+
+$modular-font-weight: (
+    light: 300,
+    normal: 400,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800
+);

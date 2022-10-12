@@ -1,0 +1,37 @@
+{
+  "NotificationRequestItem": {
+    "additionalData": {
+      "authCode": "59753",
+      "avsResult": "4 AVS not supported for this card type",
+      "cardSummary": "3332",
+      "refusalReasonRaw": "AUTHORISED",
+      "authorisationMid": "1000",
+      "acquirerAccountCode": "TestPmmAcquirerAccount",
+      "cvcResult": "1 Matches",
+      "expiryDate": "08/2018",
+      "avsResultRaw": "4",
+      "paymentMethod": "mc",
+      "cvcResultRaw": "1",
+      "paymentMethodVariant": "bijcard",
+      "acquirerCode": "TestPmmAcquirer",
+      "acquirerReference": "7F54OQBP38Q"
+    },
+    "amount": {
+      "currency": "BRL",
+      "value": 44685
+    },
+    "eventCode": "AUTHORISATION",
+    "eventDate": "2016-08-31T17:41:29+02:00",
+    "merchantAccountCode": "TrocafoneBR",
+    "merchantReference": "15cd7b9ae92789c4eee2a75dc29230cb",
+    "operations": [
+      "CANCEL",
+      "CAPTURE",
+      "REFUND"
+    ],
+    "paymentMethod": "mc",
+    "pspReference": "EXTERNAL_REFERENCE",
+    "reason": "59753:3332:08/2018",
+    "success": "true"
+  }
+}

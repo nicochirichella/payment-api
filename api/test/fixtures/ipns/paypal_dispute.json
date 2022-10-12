@@ -1,0 +1,61 @@
+{
+    "create_time": "2018-01-10T21:16:57.960Z",
+    "event_type": "CUSTOMER.DISPUTE.CREATED",
+    "event_version": "1.0",
+    "id": "WH-3A45092574647980G-0TV03845AT491360A",
+    "links": [
+        {
+            "href": "https://api.paypal.com/v1/notifications/webhooks-events/WH-3A45092574647980G-0TV03845AT491360A",
+            "method": "GET",
+            "rel": "self"
+        },
+        {
+            "href": "https://api.paypal.com/v1/notifications/webhooks-events/WH-3A45092574647980G-0TV03845AT491360A/resend",
+            "method": "POST",
+            "rel": "resend"
+        }
+    ],
+    "resource": {
+        "create_time": "2018-01-10T21:15:20.000Z",
+        "dispute_amount": {
+            "currency_code": "BRL",
+            "value": "1463.90"
+        },
+        "dispute_id": "PP-D-7152298",
+        "disputed_transactions": [
+            {
+                "custom": "PAYMENT_REFERENCE_1",
+                "invoice_number": "PAYMENT_REFERENCE_1",
+                "items": [],
+                "seller": {
+                    "name": "Trocafone Comercialização de Aparelhos Eletrônicos LTDA"
+                },
+                "seller_protection_eligible": true,
+                "seller_transaction_id": "3NY75051F6189132D"
+            }
+        ],
+        "links": [
+            {
+                "href": "https://api.paypal.com/v1/customer/disputes/PP-D-7152298",
+                "method": "GET",
+                "rel": "self"
+            },
+            {
+                "href": "https://api.paypal.com/v1/customer/disputes/PP-D-7152298/accept-claim",
+                "method": "POST",
+                "rel": "accept_claim"
+            },
+            {
+                "href": "https://api.paypal.com/v1/customer/disputes/PP-D-7152298/provide-evidence",
+                "method": "POST",
+                "rel": "provide_evidence"
+            }
+        ],
+        "reason": "UNAUTHORISED",
+        "seller_response_due_date": "2018-01-20T21:15:33.000Z",
+        "status": "WAITING_FOR_SELLER_RESPONSE",
+        "update_time": "2018-01-10T21:15:34.000Z"
+    },
+    "resource_type": "dispute",
+    "summary": "A new dispute opened with Case # PP-D-7152298PP-D-7152298"
+}

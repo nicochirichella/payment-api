@@ -1,0 +1,55 @@
+{
+  "payments": [
+    {
+      "currency": "BRL",
+      "installments": 6,
+      "amount": 60000,
+      "type": "creditCard",
+
+      "paymentInformation": {
+        "processor": "visa",
+        "lastFourDigits": 1234,
+        "firstSixDigits": 123456
+      },
+
+      "encryptedCreditCards": [{
+        "encryptedContent": "{{credit_card_token}}",
+        "encryptionType": "mercadopagoToken"
+      }]
+    },
+    {
+      "currency": "BRL",
+      "installments": 1,
+      "amount": 50000,
+      "type": "creditCard",
+
+      "paymentInformation": {
+        "processor": "mastercard",
+        "lastFourDigits": 1234,
+        "firstSixDigits": 123456
+      },
+
+      "encryptedCreditCards": [{
+        "encryptedContent": "{{credit_card_token}}",
+        "encryptionType": "mercadopagoToken"
+      }]
+    },
+    {
+      "currency": "BRL",
+      "installments": 3,
+      "amount": 30000,
+      "type": "creditCard",
+
+      "paymentInformation": {
+        "processor": "visa",
+        "lastFourDigits": 1234,
+        "firstSixDigits": 123456
+      },
+
+      "encryptedCreditCards": [{
+        "encryptedContent": "{{credit_card_token}}",
+        "encryptionType": "mercadopagoToken"
+      }]
+    }
+  ]
+}

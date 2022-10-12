@@ -1,0 +1,6 @@
+{
+  "type" : "1TCMundiPagg",
+  "name" : "Test",
+  "enabled" : true,
+  "ui_url": "http://lalala"
+}

@@ -1,0 +1,8 @@
+---
+access_key_id: "AKIAIGIH4BEYXWP6H6AQ"
+secret_access_key: "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"
+regions:
+ - 'us-east-1'
+project_tag: "Project"
+roles_tag: "Roles"
+stages_tag: "Stages"

@@ -1,0 +1,11 @@
+@mixin fontSize($size) {
+    font-size: map-get($modular-font-size, $size);
+  }
+  
+  @mixin lineHeight($size) {
+    line-height: map-get($modular-font-size, $size);
+  }
+  
+  @mixin fontWeight($weight) {
+    font-weight: map-get($modular-font-weight, $weight);
+  }

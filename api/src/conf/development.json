@@ -1,0 +1,11 @@
+{
+    "baseUrl": "http://payment-staging.trocafone.com/",
+    "front" : {
+        "baseUrl": "https://payment-frontend.trocafone.com",
+        "paypalRedirectUri": "paypal-cc-redirect-stg/index.html"
+    },
+    "log": {
+        "console_level": "trace",
+        "file_level": "trace"
+    }
+}

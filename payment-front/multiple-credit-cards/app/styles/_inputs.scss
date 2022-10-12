@@ -1,0 +1,119 @@
+
+
+
+input, input.form-control{
+    width: 100%;
+    border-radius: $rounded-corners-medium;
+    -webkit-border-radius: $rounded-corners-medium;
+    -ms-border-radius: $rounded-corners-medium;
+    -webkit-appearance: none;
+    @include fontSize(small);
+    @include fontWeight(normal);
+    box-shadow: none;
+    padding: 7px 13px;
+    border: solid 1px $gray-4;
+    background: $white;
+  
+    &::-webkit-input-placeholder {
+      @include fontSize(small);
+      @include fontWeight(normal);
+      color: $form-text-placeholder-color;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      @include fontSize(small);
+      @include fontWeight(normal);
+      color: $form-text-placeholder-color;
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+      @include fontSize(small);
+      @include fontWeight(normal);
+      color: $form-text-placeholder-color;
+    }
+    &:-ms-input-placeholder {
+      @include fontSize(small);
+      @include fontWeight(normal);
+      color: $form-text-placeholder-color;
+    }
+  
+    &.input-medium, &.input-large{
+      @include fontSize(small);
+      @include fontWeight(normal);
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        @include fontSize(small);
+        @include fontWeight(normal);
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        @include fontSize(small);
+        @include fontWeight(normal);
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        @include fontSize(small);
+        @include fontWeight(normal);
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        @include fontSize(small);
+        @include fontWeight(normal);
+      }
+    }
+    &.input-small{
+      @include fontSize(small);
+      padding: 6px 10px;
+      height: 32px;
+    }
+    &.input-medium{
+      padding: 12px 15px;
+      height: 44px;
+    }
+    &.input-large{
+      padding: 15px 15px;
+      height: 50px;
+    }
+  
+    &:focus{
+      outline:none;
+      border: solid 1px $primary-dark;
+      box-shadow: none;
+    }
+  
+    &:hover {
+      border: solid 1px $gray-6;
+    }
+  }
+  
+  input, textarea{
+    &[disabled], &[readonly]{
+      background: $gray-2;
+      color: $gray-4;
+      &:focus{
+        border: solid 1px $gray-4;
+      }
+      &::-webkit-input-placeholder {
+        color: $gray-4;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $gray-4;
+      }
+      &::-moz-placeholder {  /* Firefox 19+ */
+        color: $gray-4;
+      }
+      &:-ms-input-placeholder {
+        color: $gray-4;
+      }
+    }
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  }
+  

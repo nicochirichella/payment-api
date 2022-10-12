@@ -1,0 +1,89 @@
+{
+    "IdTrcFone": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+    "cCNPJLoja": "78425986003616",
+    "cDocNf": "000001234",
+    "cSerieNf": "UNI",
+    "cKeynfceNf": "35170516897144000122570000001089661001164969",
+    "cStatus": "02",
+    "CSTATUSDESCR": "Pendente de pagamento",
+    "CSTATUSPAGTO": "PE",
+    "cStatusDescrPagto": "Pendente de fazer os pagamentos",
+    "cObserv": "Produto seminovo, vendido em estado de conservação conferido e aceito pelo cliente. Troca somente em caso de vício técnico, por liberalidade, no prazo de quatro dias corridos a partir da emissão dessa DANFE. Após quatro dias, troca por meio de Assistência Técnica dentro do prazo de garantia de 90 dias a partir da emissão dessa DANFE. Compra realizada em loja física não sujeita a reembolso. IMEI 352049063489323. Pedido: 1245693 - Quiosque Shopping Tamboré.",
+    "dEmissao": "01/01/2018",
+    "cHora": "12:33.01",
+    "cVended": "alan@trocafone.com",
+    "nValBrut": 200,
+    "nValDesc": 40,
+    "nValLiq": 160,
+    "nVlrJuros": 30,
+    "nVlrFrete": 0,
+    "cTipoFrete": "CIF",
+    "cMoeda": "BRL",
+    "IDTRCFONEPAYMENTORDER": "A_EXTERNAL_REFERENCE",
+    "ItensVenda": [
+        {
+            "cItemVend": "001",
+            "cCodProdutoItem": "AB123CD456",
+            "cDescrProdutoItem": "CELULAR SEMINOVO MARCA XYZ",
+            "nQuantidItem": 1,
+            "nVlrUnitItem": 180,
+            "nVlrBrutItem": 180,
+            "nVlrDescItem": 36,
+            "nVlrLiqItem": 144,
+            "cCodIMEIItem": "123456789012345",
+            "cNCMProdItem": "8517.62.62"
+        },
+        {
+            "cItemVend": "002",
+            "cCodProdutoItem": "CAR-AB123CD456",
+            "cDescrProdutoItem": "CARREGADOR",
+            "nQuantidItem": 1,
+            "nVlrUnitItem": 20,
+            "nVlrBrutItem": 20,
+            "nVlrDescItem": 4,
+            "nVlrLiqItem": 16,
+            "cCodIMEIItem": null,
+            "cNCMProdItem": "8517.62.62"
+        }
+    ],
+    "cPagtos": [
+        {
+            "cParcelasPagto": 12,
+            "cFormaPagto": "CC",
+            "cOperadora": "RD",
+            "nVlrPagto": 160,
+            "nVlrJuros": 30,
+            "cNSU": "1234567890",
+            "cTransactionID": "ABC-1234567890"
+        }
+    ],
+    "cCliente": {
+        "cNumDocCliente": "78425986003615",
+        "cTipoDocCliente": "CNPJ",
+        "cTipoCliente": "J",
+        "cNomeCliente": "ACME Corporation",
+        "cEmailCliente": "a@b.c",
+        "cTelCliente": "999999999",
+        "cEndCliente": "Endereço",
+        "cBairroCliente": "Bairro",
+        "cCepCliente": "99999999",
+        "cCodMunCliente": "3550308",
+        "cMunCliente": "SAO PAULO",
+        "cEstCliente": "SP",
+        "cComplCliente": "CJ 1001",
+        "cEndentCliente": "Endereço de Entrega",
+        "cBairroeCliente": "Bairro de Entrega",
+        "cCepeCliente": "CEP de Entrega",
+        "cMuneCliente": "Municipio de Entrega",
+        "cEsteCliente": "Estado de Entrega",
+        "cComplECliente": "Complemento do endereço de Entrega",
+        "dNascCliente": "10/01/2005",
+        "cSexoCliente": "M"
+    },
+    "PromoCode": [
+        {
+            "Id": "1242142142",
+            "Code": "TROCA40"
+        }
+    ]
+}

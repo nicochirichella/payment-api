@@ -1,0 +1,3 @@
+<form id="order-form" name="forms.orderfrm" class="form-horizontal credit-card-form" novalidate update-heigth>
+        <div ng-repeat="payment in order.payments" ng-include="'views/payment.html'" ng-controller="PaymentCtrl" class="payment-container"></div>
+</form>

@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "PaymentOrder",
+  "type": "object",
+  "allOf": [
+    { "$ref": "#/definitions/readable" },
+    { "$ref": "#/definitions/writable" },
+    { "$ref": "#/definitions/relations" }
+  ],
+  "definitions": {
+
+    "readable": {
+      "properties": {
+        "id": {
+          "id": "id",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "status.json"
+        },
+        "createdAt": {
+          "id": "createdAt",
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "id": "updatedAt",
+          "type": "string",
+          "format": "date-time"
+        },
+        "expirationDate": {
+          "id": "expirationDate",
+          "format": "date-time",
+          "oneOf": [
+            {"type": "string"},
+            {"type": "null"}
+          ]
+        },
+        "interestInCents": {
+          "type": "number"
+        },
+        "totalInCents": {
+          "type": "number",
+          "minimum": 1
+        }
+      },
+      "required": ["id", "status", "createdAt", "updatedAt", "totalInCents", "interestInCents", "expirationDate"]
+    },
+
+    "writable": {
+      "properties": {
+        "purchaseReference": {
+          "id": "purchaseReference",
+          "type": "string"
+        },
+        "reference": {
+          "id": "reference",
+          "type": "string"
+        },
+        "paymentMethod": {
+          "id": "paymentMethod",
+          "type": "string",
+          "enum": [
+            "ONE_CREDIT_CARD",
+            "TWO_CREDIT_CARDS",
+            "TICKET",
+            "PAYPAL",
+            "TOTVS"
+          ]
+        },
+        "currency": {
+          "id": "currency",
+          "description": "ISO 4217 currency code (https://en.wikipedia.org/wiki/ISO_4217)",
+          "type": "string"
+        },
+        "metadata": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "successUrl": {
+                  "type": "string"
+                },
+                "cancelUrl": {
+                  "type": "string"
+                },
+                "pendingUrl": {
+                  "type": "string"
+                },
+                "delivery": {
+                  "$ref": "delivery.json"
+                }
+              },
+              "required": ["successUrl", "cancelUrl", "pendingUrl", "delivery"]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "required": ["paymentMethod", "currency", "shoppingCart"]
+      }
+    },
+
+    "relations": {
+      "properties": {
+        "shoppingCart": {
+          "$ref": "shoppingCart.json"
+        },
+        "buyer": {
+          "$ref": "person.json"
+        },
+        "payments": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "payment.json"
+          }
+        },
+        "retriedPayments": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "$ref": "payment.json"
+          }
+        },
+        "required": ["buyer", "purchaseReference", "payments"]
+      }
+    }
+
+  }
+}

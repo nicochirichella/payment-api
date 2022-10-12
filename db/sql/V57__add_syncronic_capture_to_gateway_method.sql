@@ -1,0 +1,1 @@
+ALTER TABLE gateway_methods ADD COLUMN syncronic_capture boolean not null DEFAULT false;

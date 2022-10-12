@@ -1,0 +1,25 @@
+{
+  "currency": "BRL",
+  "installments": 1,
+  "amount": 60000,
+  "type": "creditCard",
+  "paymentInformation": {
+    "processor": "visa",
+    "lastFourDigits": 1234,
+    "firstSixDigits": 123456,
+    "holderDocumentNumber": "35111931",
+    "deviceFingerprintId": "TROCAFONE_BR12345678",
+    "securityCode": 123
+  },
+  "encryptedCreditCards": [{
+    "encryptedContent": "CYBERSOURCE_PAYMENT_TOKEN",
+    "encryptionType": "cybersourceToken"
+  }],
+  "metadata": {
+    "delivery": {
+      "type": "normal",
+      "estimated_time": 6
+    }
+  }
+}
+

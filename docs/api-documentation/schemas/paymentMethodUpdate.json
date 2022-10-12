@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Payment Method update request",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "paymentMethod.json#/definitions/writable"
+    }
+  ]
+}

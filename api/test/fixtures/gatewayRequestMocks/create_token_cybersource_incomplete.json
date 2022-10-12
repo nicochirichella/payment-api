@@ -1,0 +1,20 @@
+{
+  "access_key": "A_ACCESS_KEY",
+  "profile_id": "A_PROFILE_ID",
+  "transaction_uuid": "xxxx-xxx-xxx-xxx-xxxxx",
+  "signed_date_time": "2018-11-14T14:31:36Z",
+  "locale": "en",
+  "transaction_type": "create_payment_token",
+  "reference_number": "transaction-hash",
+  "amount": "1711",
+  "currency": "BRL",
+  "payment_method": "card",
+  "bill_to_forename": "Jorge",
+  "bill_to_surname": "Patane",
+  "bill_to_email": "jorge.patane@testuser.com",
+  "bill_to_phone": "(79)2981-21772",
+  "bill_to_address_line1": "Av. Libertador XXXX",
+  "bill_to_address_city": "Abrantes (Camacari)",
+  "bill_to_address_state": "BA",
+  "bill_to_address_postal_code": "1429"
+}

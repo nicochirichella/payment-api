@@ -1,0 +1,24 @@
+{
+    "database": {
+        "client": "pg",
+        "connection": "postgres://payment_api_rw:70$9W6wdvh564Iz@prd-payment-service-database.trocafone.net/payment_api"
+    },
+    "front" : {
+        "baseUrl": "https://payment-frontend.trocafone.com",
+        "paypalRedirectUri": "paypal-cc-redirect/index.html"
+    },
+    "log": {
+        "enabled": true,
+        "console_level": "trace",
+        "file_level": "trace",
+        "file_enabled": true
+    },
+    "port": 80,
+    "ssl": false,
+    "baseUrl": "https://payment.trocafone.com/",
+    "datadog": {
+        "enabled": true,
+        "api_key": "25cbc0b2cc09b4eab731a68e76c63a91",
+        "app_key": "48bd97975395cbb6b550e34c0897967bfe6c6b44"
+    }
+}

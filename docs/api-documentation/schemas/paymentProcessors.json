@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Status for payment orders and payments",
+  "id": "paymentProcessor",
+  "type": "string",
+  "enum": [
+    "visa",
+    "mastercard",
+    "elo",
+    "diners",
+    "amex",
+    "mercadopago",
+    "hipercard"
+  ]
+}

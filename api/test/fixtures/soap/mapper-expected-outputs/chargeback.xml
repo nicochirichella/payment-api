@@ -1,0 +1,10 @@
+<merchantID>trocafone_br</merchantID>
+<merchantReferenceCode>0123-payment-ref</merchantReferenceCode>
+<clientLibrary>node</clientLibrary>
+<clientLibraryVersion>version</clientLibraryVersion>
+<clientEnvironment>osInfo</clientEnvironment>
+<fraudUpdateService run="true">
+<actionCode>ST</actionCode>
+<markingReason>Suspect</markingReason>
+<markingRequestID>DECISION_REQUEST_ID</markingRequestID>
+</fraudUpdateService>

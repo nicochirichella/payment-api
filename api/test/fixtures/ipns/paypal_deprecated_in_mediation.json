@@ -1,0 +1,53 @@
+{
+    "create_time": "2018-03-12T18:41:26.000Z",
+    "event_type": "RISK.DISPUTE.CREATED",
+    "event_version": "1.0",
+    "id": "WH-6SD39979HP598553K-4782832087091001N",
+    "links": [
+        {
+            "href": "https://api.paypal.com/v1/notifications/webhooks-events/WH-6SD39979HP598553K-4782832087091001N",
+            "method": "GET",
+            "rel": "self"
+        },
+        {
+            "href": "https://api.paypal.com/v1/notifications/webhooks-events/WH-6SD39979HP598553K-4782832087091001N/resend",
+            "method": "POST",
+            "rel": "resend"
+        }
+    ],
+    "resource": {
+        "create_time": "2018-03-12T18:40:23.000Z",
+        "dispute_amount": {
+            "currency_code": "BRL",
+            "value": "1348.90"
+        },
+        "dispute_channel": "INTERNAL",
+        "dispute_id": "PP-006-722-338-632",
+        "dispute_life_cycle_stage": "CHARGEBACK",
+        "disputed_transactions": [
+            {
+                "custom": "a9bc31040f89a21903012548f33bc4ac_1",
+                "invoice_number": "a9bc31040f89a21903012548f33bc4ac_1",
+                "items": [],
+                "seller": {
+                    "name": "Trocafone Comercialização de Aparelhos Eletrônicos LTDA"
+                },
+                "seller_protection_eligible": true,
+                "seller_transaction_id": "3WX84130AR0841058"
+            }
+        ],
+        "links": [
+            {
+                "href": "https://api.paypal.com/v1/customer/disputes/PP-006-722-338-632",
+                "method": "GET",
+                "rel": "self"
+            }
+        ],
+        "messages": [],
+        "reason": "UNAUTHORISED",
+        "status": "OPEN",
+        "update_time": "2018-03-12T18:41:26.000Z"
+    },
+    "resource_type": "dispute",
+    "summary": "A new dispute opened with Case # PP-006-722-338-632"
+}

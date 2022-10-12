@@ -1,0 +1,9 @@
+{
+    "installments": 1,
+    "amountInCents": 60000,
+    "type": "creditCard",
+    "gatewayMethod": "PAYPAL",
+    "paymentInformation": null,
+    "currency": "BRL",
+    "client_reference": "CLIENT_REFERENCE"
+}

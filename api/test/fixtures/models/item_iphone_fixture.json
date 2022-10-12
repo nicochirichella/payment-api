@@ -1,0 +1,19 @@
+{
+    "id": 1,
+    "name": "iPhone 6S 64GB Negro",
+    "external_reference": "ITEM_IPHONE",
+    "discount": 100.02,
+    "total": 1900.20,
+    "unit_cost": 1000.11,
+    "quantity": 2,
+    "payment_id": 123,
+    "created_at": "1992-05-13T14:47:06.000-04:00",
+    "updated_at": "1992-05-13T14:47:06.000-04:00",
+    "details": {
+        "brand": "Sony",
+        "model": "Sony  Xperia",
+        "has_charger": true,
+        "storage": "16GB",
+        "condition": "Bom"
+    }
+}

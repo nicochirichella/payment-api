@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "type": {
+      "id": "type",
+      "type": "string",
+      "enum": [
+        "redirect",
+        "status"
+      ]
+    },
+    "data": {
+      "id": "data",
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [ "redirectUrl" ],
+          "properties": {
+            "redirectUrl": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "required": [ "paymentOrderStatus", "reference", "purchaseReference" ],
+          "properties": {
+            "paymentOrderStatus": { "$ref": "status.json" },
+            "reference": { "type": "string" },
+            "purchaseReference": { "type": "string" }
+          }
+        }
+      ]
+
+    }
+  },
+  "required": [
+    "type",
+    "data"
+  ]
+}

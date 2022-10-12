@@ -1,0 +1,9 @@
+<merchantID>trocafone_br</merchantID>
+<merchantReferenceCode>0123-payment-ref</merchantReferenceCode>
+<clientLibrary>node</clientLibrary>
+<clientLibraryVersion>version</clientLibraryVersion>
+<clientEnvironment>osInfo</clientEnvironment>
+<caseManagementActionService run="true">
+<actionCode>REJECT</actionCode>
+<requestID>DECISION_REQUEST_ID</requestID>
+</caseManagementActionService>

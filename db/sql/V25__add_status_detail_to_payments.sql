@@ -1,0 +1,1 @@
+ALTER TABLE "public"."payments" ADD COLUMN "status_detail" varchar(150);

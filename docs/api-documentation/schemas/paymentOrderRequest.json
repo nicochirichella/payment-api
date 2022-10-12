@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Payment Order Request",
+    "type": "object",
+    "properties": {
+        "paymentOrder": {
+            "allOf": [
+                {
+                    "$ref": "paymentOrder.json#/definitions/writable"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "shoppingCart": {
+                            "$ref": "shoppingCart.json"
+                        },
+                        "buyer": {
+                            "$ref": "person.json"
+                        },
+                        "payments": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "allOf": [
+                                    {"$ref": "payment.json#/definitions/creation"},
+                                    {"$ref": "payment.json#/definitions/writable"}
+                                ]
+                            }
+                        },
+                        "required": ["buyer", "purchaseReference", "payments"]
+                    }
+                }
+            ]
+        }
+    },
+    "required": [
+        "paymentOrder"
+    ]
+}

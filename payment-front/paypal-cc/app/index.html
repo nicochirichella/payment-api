@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Trocafone Checkout</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
+    <!-- BEGIN TRACKJS -->
+    <script type="text/javascript">window._trackJs = { token: 'fe03fb4b4f2544f889e2e0206b0c6999' };</script>
+    <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+    <!-- END TRACKJS -->
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/jquery-i18n/jquery.i18n.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+</head>
+<body>
+
+<style>
+
+    body {
+        margin: 0px;
+        font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+
+    div#content {
+        padding: 0 15px;
+        padding-top: 5px;
+    }
+
+    .paypal-frontend-legend {
+        font-family: 'Open Sans', sans-serif;
+        font-size: .675rem;
+        line-height:17px;
+        color: #404040;
+        padding-bottom: 10px;
+        display: block;
+    }
+
+    .paypal-frontend-legend.warning {
+        margin-bottom: 3px;
+        font-weight: 600;
+        color: #ff8800;
+        display: block;
+    }
+
+    .checkout-product-detail-error {
+        background-color: #faf4c8;
+        text-align: left;
+        color: #404040;
+        position: relative;
+        vertical-align: middle;
+        padding: 15px;
+        font-size: 11px;
+        top: 10px;
+        font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        line-height: 1.42857143;
+        display:none
+    }
+
+    .checkout-product-detail-error:before {
+        content: '';
+        display: block;
+        top: -10px;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent #faf4c8 transparent;
+    }
+    select{
+        width:100%;
+    }
+    select {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+        padding:0 15px;
+        font-size:11px;
+        font-weight:400;
+        height: 31px;
+        border: 1px solid #cccccc;
+        background: #fff;
+        outline: 0;
+    }
+
+    .select-wrapper{
+        position: relative;
+        display: block;
+     }
+    .select-wrapper:after {
+        content: "";
+        width: 13px;
+        height: 8px;
+        position: absolute;
+        right: 6px;
+        top: 12px;
+        pointer-events: none;
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAICAYAAAAiJnXPAAAABGdBTUEAALGPC/xhBQAAANxJREFUGBljPHv2bNn///+1jI2NkxgZGf8x4ACPHz/mfPny5Qag9CQWoIZYIEPn3LlzQOZ/kMb/6Pru37/P8erVq81AcWcg/sgEBO5Axi2ghgSgrbOANCOyJpCGt2/fbgSKOwMNPMzKypoIVgC0RQooeACIVYEaZpiYmGSCNN6+fZv906dPG4DiHiANLCwsnvr6+l/hpiJrBCqYwsfHV/Lx48d1QL1eyBpAhsE1gTgXLlyQ/vv3736QjUCFD4G0PLoGDE1IGkFOVcGmAaQGKwDZCAyUKRcvXuTGpgAAX+mCb8Lq5SYAAAAASUVORK5CYII=');
+        background-repeat:no-repeat;
+    }
+
+    .form-group{
+        margin-right: -15px;
+        margin-left: -15px;
+        color: #404040;
+        margin-bottom: 10px;
+    }
+    .form-group label {
+        font-size: 11px;
+        font-weight: 600;
+    }
+    .form-group-checkout-left {
+        width: 33%;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 13px;
+        padding-right: 0;
+        text-align: right;
+    }
+    .form-group-checkout-right {
+        width: calc(67% - 50px);
+        margin-right: 15px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+</style>
+
+<div id="content">
+    <span class="paypal-frontend-legend translate">paypal.legend.content</span>
+    <div class="form-group">
+        <label for="installments" class="form-group-checkout-left translate">paypal.legend.installment_title</label>
+        <div class="form-group-checkout-right">
+            <div class="select-wrapper">
+                <select class="js-installments-select"></select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="js-checkout-error-message checkout-product-detail-error">
+    <span class="text translate">errors.payment_method_error</span>
+</div>
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/query-params-parser.js"></script>
+<script src="scripts/envs.js"></script>
+<script src="scripts/interframe_communicator.js"></script>
+<script src="scripts/payment-model.js"></script>
+<script src="scripts/update-height.js"></script>
+<script src="scripts/translations/translations.js"></script>
+<script src="scripts/app.js"></script>
+<!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "person",
+  "type": "object",
+  "properties": {
+    "reference": {
+      "id": "reference",
+      "type": "string"
+    },
+    "type": {
+      "id": "type",
+      "type": "string",
+      "enum": [ "person","company" ]
+    },
+    "name": {
+      "id": "name",
+      "type": "string"
+    },
+    "gender": {
+      "id": "gender",
+      "oneOf" : [
+        {"type": "string", "enum": [ "F","M" ]},
+        {"type": "null"}
+      ]
+    },
+    "birthDate": {
+      "id": "birthDate",
+      "oneOf" : [
+        {"type": "string", "format": "date"},
+        {"type": "null"}
+      ]
+    },
+    "documentNumber": {
+      "id": "documentNumber",
+      "type": "string",
+      "pattern": "^[0-9]*$"
+    },
+    "documentType": {
+      "id": "documentType",
+      "type": "string",
+      "enum": ["CPF","CNPJ"]
+    },
+    "email": {
+      "id": "email",
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "id": "phone",
+      "type": "string",
+      "pattern": "^[0-9]*$"
+    },
+    "ipAddress": {
+      "id": "ipAddress",
+      "type": "string",
+      "format": "ipv4"
+    },
+    "billingAddress": {
+      "$ref": "address.json"
+    },
+    "shippingAddress": {
+      "$ref": "address.json"
+    }
+  },
+  "required": [
+    "reference",
+    "type",
+    "name",
+    "gender",
+    "birthDate",
+    "documentNumber",
+    "documentType",
+    "email",
+    "phone",
+    "ipAddress",
+    "billingAddress"
+  ]
+}

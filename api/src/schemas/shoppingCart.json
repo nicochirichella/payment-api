@@ -1,0 +1,79 @@
+{
+  "title": "Shopping Cart",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "id": "name",
+              "type": "string"
+            },
+            "reference": {
+              "id": "reference",
+              "type": "string"
+            },
+            "discountAmountInCents": {
+              "id": "discountAmountInCents",
+              "type": "integer",
+              "minimum": 0
+            },
+            "totalCostInCents": {
+              "id": "totalCostInCents",
+              "type": "integer",
+              "minimum": 0
+            },
+            "unitCostInCents": {
+              "id": "unitCostInCents",
+              "type": "integer",
+              "minimum": 0
+            },
+            "quantity": {
+              "id": "quantity",
+              "type": "integer",
+              "minimum": 1
+            },
+            "imageUrl": {
+              "id": "imageUrl",
+              "type": "string"
+            },
+            "details": {
+              "brand": {
+                "id": "brand",
+                "type": "string"
+              },
+              "model": {
+                "id": "model",
+                "type": "string"
+              },
+              "has_charger": {
+                "id": "has_charger",
+                "type": "boolean"
+              },
+              "storage": {
+                "id": "storage",
+                "type": "string"
+              },
+              "condition": {
+                "id": "condition",
+                "type": "string"
+              }
+            },
+            "required": ["brand", "model", "has_charger", "storage", "condition"]
+          },
+          "required": ["name", "reference", "discountAmountInCents", "totalCostInCents", "unitCostInCents", "quantity", "details"]
+        }
+      ],
+      "additionalItems": false
+    },
+    "totalCostInCents": {
+      "id": "totalCostInCents",
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": ["items", "totalCostInCents"]
+}

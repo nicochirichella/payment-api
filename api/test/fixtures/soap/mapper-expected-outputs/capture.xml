@@ -1,0 +1,17 @@
+<merchantID>trocafone_br</merchantID>
+<merchantReferenceCode>0123-payment-ref</merchantReferenceCode>
+<clientLibrary>node</clientLibrary>
+<clientLibraryVersion>version</clientLibraryVersion>
+<clientEnvironment>osInfo</clientEnvironment>
+<item id="0">
+<unitPrice>34.2</unitPrice>
+<quantity>1</quantity>
+</item>
+<purchaseTotals>
+<currency>CUR</currency>
+<grandTotalAmount>42.23</grandTotalAmount>
+</purchaseTotals>
+<installment>
+<totalCount>8</totalCount>
+</installment>
+<ccCaptureService run="true"><authRequestID>AUTHORIZATION_REQUEST_ID</authRequestID></ccCaptureService>

@@ -1,0 +1,19 @@
+{
+    "id": 2,
+    "name": "Samsung Galaxy Note 64GB Blanco",
+    "external_reference": "ITEM_SAMSUNG",
+    "discount": 10,
+    "total": 90,
+    "unit_cost": 100,
+    "quantity": 1,
+    "payment_id": 123,
+    "created_at": "1992-05-13T14:47:06.000-04:00",
+    "updated_at": "1992-05-13T14:47:06.000-04:00",
+    "details": {
+        "brand": "Samsung",
+        "model": "S7",
+        "has_charger": true,
+        "storage": "32GB",
+        "condition": "Bom"
+    }
+}

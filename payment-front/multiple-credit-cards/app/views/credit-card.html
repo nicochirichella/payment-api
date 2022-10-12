@@ -1,0 +1,154 @@
+
+<div class="form-group" show-errors="number" >
+        <label for="creditcard" class="form-group-checkout-left control-label">Número do cartão</label>
+        <div class="form-group-checkout-right">
+            <input type="tel"
+                   name="number"
+                   class="form-control"
+                   ng-model="creditCard.number"
+                   placeholder="1111 2222 3333 4444"
+                   ng-required="true"
+                   check-credit-card="creditCard"
+                   ui-mask="{{ creditCard.processor.cardMask() }}"
+                   ui-options="{clearOnBlur: false, partialValue: true}"
+                   ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }"
+                   ui-mask-placeholder
+            />
+
+        </div>
+        <div class="help-block" role="alert">
+            <div ng-show="pf.number.$error.required">Campo obrigatório</div>
+            <div ng-show="pf.number.$error.mask">O cartão de crédito deve ser de {{ creditCard.processor.cardLength() }} números</div>
+            <div ng-show="pf.number.$error.creditCard">Cartão de crédito e invalida</div>
+        </div>
+        <div class="credit-img-block">
+            <img ng-repeat="p in processors"
+                 ng-src="{{ p.logo_image }}"
+                 alt="{{ p.name }}"
+                 title="{{ p.name }}"
+                 class="processor"
+                 ng-class="{
+                        active: creditCard.processor.id == p.id
+                    }"
+            />
+        </div>
+    </div>
+    <div class="form-group credit-card-date" show-errors="month,year" show-date-errors="month,year">
+        <label class="form-group-checkout-left control-label">Validade</label>
+        <div class="form-group-checkout-right">
+            <div class="col-xs-6 col-pr-2">
+                <input type="hidden" class="form-control" name="month" ng-required="true" ng-model="creditCard.expirationMonth"/>
+                <div ng-if="isMobile">
+                    <select ng-model="creditCard.expirationMonth" colorize-placeholder convert-to-number>
+                        <option value="" disabled>Mês</option>
+                        <option value="{{month}}" ng-repeat="month in months">{{month}}</option>
+                    </select>
+                </div>
+                <div ng-if="!isMobile">
+                    <ui-select ng-model="creditCard.expirationMonth" theme="bootstrap" search-enabled="true">
+                        <ui-select-match placeholder="Mês">{{$select.selected}}</ui-select-match>
+                        <ui-select-choices repeat="month in months | filter: $select.search">
+                            <div ng-bind="month"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+                <div class="help-block" role="alert">
+                    <div ng-show="pf.month.$error.required">Campo obrigatório</div>
+                    <div ng-show="pf.month.$error.dateInThePast">A data não pode ser no passado.</div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-pl-2">
+                <input type="hidden" class="form-control" name="year" ng-required="true" ng-model="creditCard.expirationYear"/>
+                <div ng-if="isMobile">
+                    <select ng-model="creditCard.expirationYear" colorize-placeholder convert-to-number>
+                        <option value="" disabled>Ano</option>
+                        <option value="{{year}}" ng-repeat="year in years">{{year}}</option>
+                    </select>
+                </div>
+                <div ng-if="!isMobile">
+                    <ui-select ng-model="creditCard.expirationYear" theme="bootstrap" search-enabled="true">
+                        <ui-select-match placeholder="Ano">{{$select.selected}}</ui-select-match>
+                        <ui-select-choices repeat="year in years | filter: $select.search">
+                            <div ng-bind="year"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+                <div class="help-block" role="alert">
+                    <div ng-show="pf.year.$error.required">Campo obrigatório</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group security-code" show-errors="securityCode">
+        <label for="security-code" class="form-group-checkout-left control-label">Código de Segurança</label>
+        <div class="form-group-checkout-right">
+            <input type="tel"
+                   name="securityCode"
+                   class="form-control"
+                   ng-model="creditCard.securityCode"
+                   ui-mask="{{ '9' | repeat:creditCard.processor.securityCodeLength() }}"
+                   ui-mask-placeholder
+                   ng-required="true"
+                   ui-options="{clearOnBlur: false, partialValue: true}"
+            />
+            <a href="javascript:void(0)" tabindex="-1" class="help-btn">
+                <i class="fa fa-question-circle">
+                    <span class="card-image-popover">
+                        <span class="credit-card" ng-class="{ front: creditCard.processor.isSecurityCodeOnFront() }"></span>
+                    </span>
+                </i>
+            </a>
+
+        </div>
+        <div class="help-block" role="alert">
+            <div ng-show="pf.securityCode.$error.required">Campo obrigatório</div>
+            <div ng-show="pf.securityCode.$error.mask">O código de segurança deve ser de {{ creditCard.processor.securityCodeLength() }} números</div>
+        </div>
+        <span class="help-quote">Últimos {{ creditCard.processor.securityCodeLength() }} números do <span class="security-code-in">verso</span> do seu cartão de crédito</span>
+    </div>
+    <div class="form-group" show-errors="name">
+        <label for="cardholder-name" class="form-group-checkout-left control-label">Nome e Sobrenome</label>
+        <div class="form-group-checkout-right">
+            <input type="text" ng-pattern="/^[a-zA-Z\_\s\u00C0-\u00FC]+$/" name="name" class="form-control" ng-required="true" ng-model="creditCard.holderName" placeholder="Nome e Sobrenome">
+
+        </div>
+        <div class="help-block" role="alert">
+            <div ng-show="pf.name.$error.required">Campo obrigatório</div>
+            <div ng-show="pf.name.$error.pattern">Digite seu nome corretamente</div>
+        </div>
+        <span class="help-quote">Exatamente como aparece no seu cartão</span>
+    </div>
+    <div class="form-group" show-errors="documentType" ng-if="documentTypes.length > 1">
+        <label class="form-group-checkout-left control-label">Document Type</label>
+        <div class="form-group-checkout-right">
+            <select class="form-control"
+                    name="documentType"
+                    ng-required="true"
+                    ng-model="creditCard.documentType"
+                    ng-options="documentType.name as documentType.name for documentType in documentTypes track by documentType.name">
+                <option value="">Seleccionar tipo de documento</option>
+            </select>
+
+        </div>
+        <div class="help-block" role="alert">
+            <div ng-show="pf.documentType.$error.required">Campo obrigatório</div>
+        </div>
+    </div>
+    <div class="form-group" show-errors="documentNumber">
+        <label for="doc-type" class="form-group-checkout-left control-label">{{ creditCard.documentType || 'Número de documento' }}</label>
+        <div class="form-group-checkout-right">
+            <input type="tel"
+                   name="documentNumber"
+                   class="form-control"
+                   ng-required="true"
+                   ng-model="creditCard.documentNumber"
+                   ui-mask="{{ documentTypeMask() }}"
+                   ui-options="{clearOnBlur: false, partialValue: true}"
+            />
+
+        </div>
+        <div class="help-block" role="alert">
+            <div ng-show="pf.documentNumber.$error.required">Campo obrigatório</div>
+            <div ng-show="pf.documentNumber.$error.mask">Complete o número de documento corretamente</div>
+        </div>
+    </div>

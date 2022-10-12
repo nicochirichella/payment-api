@@ -1,0 +1,32 @@
+{
+  "client_reference": "order_reference",
+  "payloadJson": {
+    "StatusNotification": {
+      "AmountInCents": "90000",
+      "AmountPaidInCents": "0",
+      "BoletoTransaction": "",
+      "CreditCardTransaction": {
+        "Acquirer": "Redecard",
+        "AmountInCents": "90000",
+        "AuthorizationCode": "",
+        "AuthorizedAmountInCents": "",
+        "CapturedAmountInCents": "",
+        "CreditCardBrand": "Visa",
+        "CustomStatus": "",
+        "RefundedAmountInCents": "",
+        "StatusChangedDate": "2016-01-22T02:53:38.31",
+        "TransactionIdentifier": "",
+        "TransactionKey": "transaction_key",
+        "TransactionReference": "transaction_reference",
+        "UniqueSequentialNumber": "",
+        "VoidedAmountInCents": "",
+        "PreviousCreditCardTransactionStatus": "Created",
+        "CreditCardTransactionStatus": "NotAuthorized"
+      },
+      "MerchantKey": "merchant_key",
+      "OrderKey": "order_key",
+      "OrderReference": "order_reference",
+      "OrderStatus": "Opened"
+    }
+  }
+}

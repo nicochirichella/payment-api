@@ -1,0 +1,17 @@
+module.exports = Object.freeze({
+  successful: 'successful',
+  rejected: 'rejected',
+  chargedBack: 'chargedBack',
+  pendingCapture: 'pendingCapture',
+  refunded: 'refunded',
+  cancelled: 'cancelled',
+  partialRefund: 'partialRefund',
+  inMediation: 'inMediation',
+  pendingCancel: 'pendingCancel',
+  pendingAuthorize: 'pendingAuthorize',
+  authorized: 'authorized',
+  creating: 'creating',
+  error: 'error',
+  pendingClientAction: 'pendingClientAction',
+  pendingExecute: 'pendingExecute',
+});

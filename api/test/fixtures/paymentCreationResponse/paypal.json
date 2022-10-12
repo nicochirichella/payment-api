@@ -1,0 +1,101 @@
+{
+    "data": {
+        "application_context": {
+            "shipping_preference": "SET_PROVIDED_ADDRESS"
+        },
+        "create_time": "2018-01-11T18:11:30Z",
+        "id": "PAY-8KR674868H750523LLJL2RUQ",
+        "intent": "sale",
+        "links": [
+            {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAY-8KR674868H750523LLJL2RUQ",
+                "method": "GET",
+                "rel": "self"
+            },
+            {
+                "href": "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-20960530C71342243",
+                "method": "REDIRECT",
+                "rel": "approval_url"
+            },
+            {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAY-8KR674868H750523LLJL2RUQ/execute",
+                "method": "POST",
+                "rel": "execute"
+            }
+        ],
+        "note_to_payer": "Obrigado por sua compra.",
+        "payer": {
+            "payer_info": {
+                "billing_address": {
+                    "city": "Sao Paulo",
+                    "country_code": "BR",
+                    "line1": "Rua Estela Sezefreda 123",
+                    "line2": "Pinheiros ",
+                    "phone": "23438725185",
+                    "postal_code": "05415070",
+                    "state": "São Paulo"
+                },
+                "birth_date": "1990-01-01",
+                "email": "test_user_29505388@testuser.com",
+                "first_name": "Megan Powell",
+                "last_name": "",
+                "tax_id": "57842217000166",
+                "tax_id_type": "BR_CNPJ"
+            },
+            "payment_method": "paypal"
+        },
+        "state": "created",
+        "transactions": [
+            {
+                "amount": {
+                    "currency": "BRL",
+                    "details": {
+                        "subtotal": "636.00"
+                    },
+                    "total": "636.00"
+                },
+                "custom": "PAYMENT_REFERENCE_1",
+                "invoice_number": "PAYMENT_REFERENCE_1",
+                "item_list": {
+                    "items": [
+                        {
+                            "currency": "BRL",
+                            "description": "Samsung Galaxy S4 Zoom Preto (Bom)",
+                            "name": "Samsung Galaxy S4 Zoom Preto (Bom)",
+                            "price": "636.00",
+                            "quantity": 1
+                        }
+                    ],
+                    "shipping_address": {
+                        "city": "Sao Paulo",
+                        "country_code": "BR",
+                        "line1": "Rua Estela Sezefreda 123",
+                        "line2": "Pinheiros ",
+                        "phone": "23438725185",
+                        "postal_code": "05415070",
+                        "state": "São Paulo"
+                    }
+                },
+                "payment_options": {
+                    "allowed_payment_method": "INSTANT_FUNDING_SOURCE",
+                    "recurring_flag": false,
+                    "skip_fmf": false
+                },
+                "reference_id": "6047517bbddf82d3f5fa481913eace10_1",
+                "related_resources": []
+            }
+        ],
+        "credit_financing_offered": {
+            "total_cost": {
+                "value": "636.00",
+                "currency": "BRL"
+            },
+            "term": 10,
+            "monthly_payment": {
+                "value": "63.60",
+                "currency": "BRL"
+            }
+        }
+    }
+}
+

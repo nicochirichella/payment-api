@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Payment",
+  "allOf": [
+    { "$ref": "#/definitions/readable" },
+    { "$ref": "#/definitions/writable" }
+  ],
+  "definitions": {
+
+    "readable": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "id": "id",
+          "type": "string"
+        },
+        "gatewayReference": {
+          "id": "gatewayReference",
+          "oneOf": [
+            {"type": "string"},
+            {"type": "null"}
+          ]
+        },
+        "gatewayMethod": {
+          "id": "gatewayMethod",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "status.json"
+        },
+        "createdAt": {
+          "id": "createdAt",
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "id": "updatedAt",
+          "type": "string",
+          "format": "date-time"
+        },
+        "clientReference": {
+          "id": "clientReference",
+          "type": "string"
+        },
+        "statusDetail": {
+          "id": "statusDetail",
+          "type": "string"
+        },
+        "retriedWithPaymentId": {
+          "id": "retriedWithPaymentId",
+          "type": ["string", "null"]
+        }
+      },
+      "required": ["id", "gatewayReference", "status", "installments", "createdAt", "updatedAt"]
+    },
+
+    "writable": {
+      "type": "object",
+      "properties": {
+        "installments": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "amountInCents": {
+          "type": "number",
+          "minimum": 1
+        },
+        "interestInCents": {
+          "type": "number"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "creditCard",
+            "ticket",
+            "paypal",
+            "totvs"
+          ]
+        },
+        "paymentInformation": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+
+                "processor": {
+                  "$req": "paymentProcessors.json"
+                },
+                "lastFourDigits": {
+                  "type": "string",
+                  "pattern": "^[0-9]{4}$"
+                },
+                "firstSixDigits": {
+                  "type": "string",
+                  "pattern": "^[0-9]{6}$"
+                },
+                "deviceFingerprintId": {
+                  "oneOf": [
+                    {"type": "string"},
+                    {"type": "null"}
+                  ]
+                }
+              },
+              "required": ["processor", "lastFourDigits", "firstSixDigits"]
+            },
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "barcode": {
+                  "oneOf": [
+                    {"type": "null"},
+                    {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "enum": [
+                                "plain",
+                                "uccean128",
+                                "code128c",
+                                "code39"
+                              ]
+                            },
+                            {"type": "null"}
+                          ]
+                        },
+                        "content": {
+                          "oneOf": [
+                            {"type": "string"},
+                            {"type": "null"}
+                          ]
+                        },
+                        "width": {
+                          "oneOf": [
+                            {"type": "number"},
+                            {"type": "null"}
+                          ]
+                        },
+                        "height": {
+                          "oneOf": [
+                            {"type": "number"},
+                            {"type": "null"}
+                          ]
+                        }
+                      },
+                      "required": ["type", "content", "width", "height"]
+                    }
+                  ]
+                },
+                "ticket_reference": {
+                  "oneOf": [
+                    {"type": "string"},
+                    {"type": "null"}
+                  ]
+                },
+                "ticket_url": {
+                  "oneOf": [
+                    {"type": "string"},
+                    {"type": "null"}
+                  ]
+                }
+              },
+              "required": ["barcode", "ticket_reference", "ticket_url"]
+            }
+          ]
+        }
+      },
+      "required": ["installments", "amountInCents", "paymentInformation", "type"]
+    },
+
+    "creation": {
+      "type": "object",
+      "properties": {
+        "encryptedCreditCards": {
+          "type": "array",
+          "minItems": 1,
+          "items": [{
+            "type": "object",
+            "properties": {
+              "encryptedContent": {
+                "type": "string"
+              },
+              "encryptionType": {
+                "type": "string"
+              }
+            },
+            "required": ["encryptedContent", "encryptionType"]
+          }]
+        }
+      },
+      "required": []
+    }
+
+  }
+}

@@ -1,0 +1,7 @@
+**/node_modules
+**/.DS_Store
+*.sublime-*
+**/.idea
+**/.nyc_output
+.idea
+npm-debug.log

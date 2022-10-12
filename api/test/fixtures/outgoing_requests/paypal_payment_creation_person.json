@@ -1,0 +1,69 @@
+{
+    "application_context": {
+        "shipping_preference": "SET_PROVIDED_ADDRESS"
+    },
+    "intent": "sale",
+    "note_to_payer": "Obrigado por sua compra.",
+    "payer": {
+        "payer_info": {
+            "billing_address": {
+                "city": "City",
+                "country_code": "BR",
+                "line1": "Calle Loca 1234C",
+                "line2": "District Complement",
+                "phone": "1234567890",
+                "postal_code": "23970000",
+                "state": "State",
+                "type": "HOME_OR_WORK"
+            },
+            "birth_date": "1980-12-10",
+            "email": "test@test.com",
+            "first_name": "Fulanito Manguito Detal",
+            "last_name": "",
+            "tax_id": "000111222333",
+            "tax_id_type": "BR_CPF"
+        },
+        "payment_method": "paypal"
+    },
+    "redirect_urls": {
+        "cancel_url": "www.cancelUrl.com",
+        "return_url": "https://checkout.url.com/execute?hash=PURCHASE_REFERENCE"
+    },
+    "transactions": [
+        {
+            "amount": {
+                "currency": "CUR",
+                "details": {
+                    "subtotal": 42.23
+                },
+                "total": 42.23
+            },
+            "custom": "0123-payment-ref",
+            "invoice_number": "0123-payment-ref",
+            "item_list": {
+                "items": [
+                    {
+                        "currency": "CUR",
+                        "description": "Samsung Galaxy Mega Duos Preto (Bom)",
+                        "name": "Samsung Galaxy Mega Duos Preto (Bom)",
+                        "price": 42.23,
+                        "quantity": 1
+                    }
+                ],
+                "shipping_address": {
+                    "city": "SCity",
+                    "country_code": "BR",
+                    "line1": "SCalle Loca S1234C",
+                    "line2": "SDistrict SComplement",
+                    "phone": "1234567890",
+                    "postal_code": "S2397000",
+                    "state": "SState"
+                }
+            },
+            "payment_options": {
+                "allowed_payment_method": "INSTANT_FUNDING_SOURCE"
+            },
+            "reference_id": "0123-payment-ref"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "address",
+  "type": "object",
+  "properties": {
+    "city": {
+      "id": "city",
+      "type": "string"
+    },
+    "district": {
+      "id": "district",
+      "type": "string"
+    },
+    "country": {
+      "id": "country",
+      "type": "string"
+    },
+    "complement": {
+      "id": "complement",
+      "type": "string"
+    },
+    "number": {
+      "id": "number",
+      "type": "string"
+    },
+    "zipCode": {
+      "id": "zipCode",
+      "type": "string",
+      "pattern": "^[0-9]*$"
+    },
+    "state": {
+      "id": "state",
+      "type": "string"
+    },
+    "stateCode": {
+      "id": "state",
+      "type": "string"
+    },
+    "street": {
+      "id": "street",
+      "type": "string"
+    }
+  },
+  "required": ["city","district","country","number","zipCode","state","stateCode","street"]
+}

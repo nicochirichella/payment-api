@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.examples.com/wsdl/HelloService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap:Body>
+    <tns:sayHello>
+      <merchantID>trocafone_br</merchantID>
+      <merchantReferenceCode>your_merchant_reference_code</merchantReferenceCode>
+      <clientLibrary>PHP</clientLibrary>
+      <clientLibraryVersion>5.5.38</clientLibraryVersion>
+      <clientEnvironment>Darwin Javiers-MacBook-Pro-2.local 17.6.0 Darwin Kernel Version 17.6.0: Tue May  8 15:22:16 PDT 2018; root:xnu-4570.61.1~1/RELEASE_X86_64 x86_64</clientEnvironment>
+      <billTo>
+        <firstName>John</firstName>
+        <lastName>Doe</lastName>
+        <street1>1295 Charleston Road</street1>
+        <city>Mountain View</city>
+        <state>CA</state>
+        <postalCode>94043</postalCode>
+        <country>US</country>
+        <email>null@cybersource.com</email>
+        <ipAddress>10.7.111.111</ipAddress>
+      </billTo>
+      <item1 id="0">
+        <unitPrice>12.34</unitPrice>
+        <quantity>2</quantity>
+      </item1>
+      <item2 id="1">
+        <unitPrice>99.99</unitPrice>
+        <quantity>4</quantity>
+      </item2>
+      <purchaseTotals>
+        <currency>USD</currency>
+      </purchaseTotals>
+      <ccAuthService run="true"/>
+    </tns:sayHello>
+  </soap:Body>
+</soap:Envelope>
